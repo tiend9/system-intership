@@ -2,7 +2,7 @@
 
 ## I. IPv4 là gì
 
-IPv4 (Internet Protocol version 4) là phiên bản thứ tư của giao thức Internet (IP), một hệ thống địa chỉ số được sử dụng để định danh và liên kết các thiết bị kết nối với internet. Nó là một trong những giao thức cốt lõi của bộ giao thức Internet và chịu trách nhiệm định tuyến lưu lượng truy cập trên mạng. Địa chỉ IPv4 được biểu diễn dưới dạng chuỗi số, chia thành các nhóm được ngăn cách bằng dấu chấm, `ví dụ: 192.168.0.1`
+IPv4 (Internet Protocol version 4) là phiên bản thứ tư của giao thức Internet (IP), một hệ thống địa chỉ số được sử dụng để định danh và liên kết các thiết bị kết nối với internet. Nó chịu trách nhiệm định tuyến lưu lượng truy cập trên mạng. Địa chỉ IPv4 được biểu diễn dưới dạng chuỗi số, chia thành các nhóm được ngăn cách bằng dấu chấm, `ví dụ: 192.168.0.1`
 
 ## II. Tại sao lại không có IPv1,2,3,5 ?
 
@@ -45,6 +45,20 @@ Sơ đồ cấu trúc của IPv4 Diagram
 - Mỗi octet tương ứng với 8 bit nhị phân. Khi kết hợp 4 octet lại, chúng ta có tổng cộng 32 bit. Cấu trúc này cho phép tạo ra khoảng 4,3 tỷ địa chỉ duy nhất. Ví dụ, địa chỉ 192.168.1.1 trong hệ nhị phân sẽ là
 
 > 11000000.10101000.00000001.00000001
+
+**-Một số quy tắc đặt địa chỉ IP phải tuân theo:**
+
+- Các bit phần mạng không được phép đồng thời bằng 0.
+
+>VD: địa chỉ 0.0.0.1 với phần mạng là 0.0.0 và phần host là 1 là không hợp lệ.
+
+- Nếu các bit phần host đồng thời bằng 0, ta có một địa chỉ mạng.
+
+>VD: địa chỉ 192.168.1.1 là một địa chỉ có thể gán cho host nhưng địa chỉ 192.168.1.0 là một địa chỉ mạng, không thể gán cho host được.
+
+- Nếu các bit phần host đồng thời bằng 1, ta có một địa chỉ quảng bá (broadcast).
+
+-VD: địa chỉ 192.168.1.255 là một địa chỉ broadcast cho mạng 192.168.1.0
 
 ![Sơ đồ ](./images/IPv4_structure2.png)
 
@@ -95,6 +109,7 @@ Các lớp IP address có thể dùng đặt cho các host là các lớp A, B, 
 - Các địa chỉ mạng lớp A sẽ bao gồm: 1.0.0.0 -> 126.0.0.0.
 - Mạng 127.0.0.0 được sử dụng như mạng loopback.
 - Phần host có 24 bit => mỗi network lớp A có (2^24 – 2) host.
+- Có 126 mạng trong lớp A
 
 ### 2. Lớp B
 
@@ -103,7 +118,7 @@ Các lớp IP address có thể dùng đặt cho các host là các lớp A, B, 
 - Địa chỉ lớp B sử dụng 2 octet đầu làm phần mạng, 2 octet sau làm phần
 - 2 bit đầu của một IP lớp B sẽ luôn là 1 0.
 - Các địa chỉ mạng lớp B sẽ bao gồm: 128.0.0.0 -> 191.255.0.0.
-- Có tổng cộng 214 mạng trong lớp IP lớp
+- Có tổng cộng 2^14 mạng trong lớp B
 - Phần host dài 16 bit, vì vậy một mạng lớp B có (2^16– 2) host.
 
 ### 3. Lớp C
@@ -112,7 +127,7 @@ Các lớp IP address có thể dùng đặt cho các host là các lớp A, B, 
 
 - IP lớp C sử dụng ba octet đầu làm phần network, một octet sau làm phần
 - Ba bit đầu của một IP lớp C luôn là 1 1 0.
-- Các địa chỉ mạng lớp C sẽ bao gồm: 192.0.0.0 -> 223.255.255.0. - - Có tổng cộng 221 mạng trong lớp C.
+- Các địa chỉ mạng lớp C sẽ bao gồm: 192.0.0.0 -> 223.255.255.0. - - Có tổng cộng 2^21 mạng trong lớp C.
 - Phần host dài 8 bit vì vậy nên một mạng lớp C sẽ có (2^8– 2) host.
 
 ### 4. Lớp D
@@ -151,7 +166,7 @@ Các lớp IP address có thể dùng đặt cho các host là các lớp A, B, 
 | **Quản lý**           | Được sử dụng để load hệ điều hành mạng                                                                           | Được kiểm soát bởi ISP (nhà cung cấp dịch vụ Internet)                              |
 | **Chi phí**           | Miễn phí                                                                                                         | Không miễn phí                                                                      |
 | **Cách kiểm tra**     | Nhập `ipconfig` vào Command Prompt                                                                               | Gõ "what is my ip" vào Google                                                       |
-| **Phạm vi địa chỉ**   | - 10.0.0.0 – 10.255.255.255 <br> - 172.16.0.0 – 172.31.255.255 <br> - 192.168.0.0 – 192.168.255.255              | Ngoại trừ các địa chỉ IP private, toàn bộ phần còn lại đều là IP public             |
+| **Phạm vi địa chỉ/Dải Host**   | - 10.0.0.0 – 10.255.255.255 <br> - 172.16.0.0 – 172.31.255.255 <br> - 192.168.0.0 – 192.168.255.255              | Ngoại trừ các địa chỉ IP private, toàn bộ phần còn lại đều là IP public             |
 
 ## VII. Cách chia địa chỉ IPv4
 

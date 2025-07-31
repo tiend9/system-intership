@@ -84,15 +84,18 @@
 
 -Tầng mạng chính là nơi quyết định đường đi của dữ liệu trong mạng, từ điểm xuất phát đến điểm đích. Khả năng hoạt động chính xác và hiệu quả tại tầng này đóng vai trò quan trọng trong việc đảm bảo dữ liệu được truyền tải một cách đáng tin cậy trên Internet rộng lớn ngày nay.
 
-### 4. Tầng 1 – Physical (Tầng vật lý)
+### 4. Tầng 1 – Network Access layer(Tầng liên kết mạng)
 
-> Tầng vật lý là tầng thứ nhất của mô hình TCP/IP, đóng vai trò quan trọng trong quá trình truyền dữ liệu giữa các thiết bị trong cùng một mạng. Nó là sự kết hợp khéo léo giữa tầng Vật lý và tầng Liên kết dữ liệu của mô hình OSI, tạo nên cơ sở hạ tầng vật lý cho hệ thống mạng hiện đại.
+>Tầng 1: Tầng truy cập (Network Access Layer) tầng này có thể coi là một tầng riêng biệt hoặc cũng có thể tách nó thành 2 tầng vật lý và tầng liên két dữ liệu như trong mô hình OSI.Nó được sử dụng để truyền gói tin từ tầng mạng đến các Host trong mạng
 
--Tại tầng vật lý, dữ liệu được truyền dưới dạng khung, hay Frame, từ một thiết bị tới thiết bị khác trong mạng. Quá trình này bắt đầu khi gói dữ liệu được đóng gói vào trong khung, chứa các thông tin quan trọng như địa chỉ và kiểm tra lỗi. Khung được truyền qua các thiết bị và đường truyền vật lý đến điểm đích, được định tuyến đến đúng đích đã được chỉ định ban đầu.
+-Các thiết bị vật lí dùng để truyền tin ở tầng này :
 
--Tầng vật lý chịu trách nhiệm về việc định nghĩa các đặc tính vật lý của kết nối, bao gồm loại cáp, cách truyền dẫn, và các thông số kỹ thuật khác. Nó đảm bảo rằng dữ liệu được chuyển đúng cách và ổn định qua môi trường truyền.
+- Switch
 
--Tầng này thường xuyên được nhấn mạnh trong việc xây dựng và duy trì mạng vì ảnh hưởng lớn đến hiệu suất và độ tin cậy của hệ thống.
+- cáp mạng
+ 
+- card mạng HBA-Host Bus Adapter là các thành phần truy cập.
+
 
 ## III. So sánh mô hình TCP/IP với OSI
 
@@ -170,18 +173,3 @@
 > - Kiểm soát tắc nghẽn giúp việc truyền dữ liệu không làm tắc nghẽn mạng
 > - Hỗ trợ truyền và nhận cùng lúc nhiều Segment
 
-Tư liệu tham khảo.
-
-[1] [https://www.totolink.vn/article/149-mo-hinh-tcp-ip-la-gi-chuc-nang-cua-cac-tang-trong-mo-hinh-tcp-ip.html](https://www.totolink.vn/article/149-mo-hinh-tcp-ip-la-gi-chuc-nang-cua-cac-tang-trong-mo-hinh-tcp-ip.html)
-
-[2] [https://tenten.vn/tin-tuc/tcp-ip-la-gi/#1_TCPIP_la_gi](https://tenten.vn/tin-tuc/tcp-ip-la-gi/#1_TCPIP_la_gi)
-
-[3] [https://fpttelecom.com/blog/mo-hinh-osi/](https://fpttelecom.com/blog/mo-hinh-osi/)
-
-[4] [https://fptcloud.com/tcp-ip-la-gi/](https://fptcloud.com/tcp-ip-la-gi/)
-
-[5] [https://thietbimangcisco.vn/tim-hieu-dac-diem-2-mo-hinh-truyen-thong-osi-va-tcp-ip-v-322-330-5216.html](https://thietbimangcisco.vn/tim-hieu-dac-diem-2-mo-hinh-truyen-thong-osi-va-tcp-ip-v-322-330-5216.html)
-
-[6] [https://xaydungso.vn/blog/giai-thich-tcp-va-ip-la-gi-va-cach-chung-hoat-dong-trong-mang-vi-cb.html](https://xaydungso.vn/blog/giai-thich-tcp-va-ip-la-gi-va-cach-chung-hoat-dong-trong-mang-vi-cb.html)
-
-[7] [https://viblo.asia/p/tim-hieu-co-ban-ve-mo-hinh-tcpip-RQqKLkJp57z](https://viblo.asia/p/tim-hieu-co-ban-ve-mo-hinh-tcpip-RQqKLkJp57z)

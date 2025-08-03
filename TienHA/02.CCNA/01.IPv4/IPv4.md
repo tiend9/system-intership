@@ -2,17 +2,17 @@
 
 ## I. IPv4 là gì
 
-IPv4 (Internet Protocol version 4) là phiên bản thứ tư của giao thức Internet (IP), một hệ thống địa chỉ số được sử dụng để định danh và liên kết các thiết bị kết nối với internet. Nó chịu trách nhiệm định tuyến lưu lượng truy cập trên mạng. Địa chỉ IPv4 được biểu diễn dưới dạng chuỗi số, chia thành các nhóm được ngăn cách bằng dấu chấm, `ví dụ: 192.168.0.1`
+> IPv4 (Internet Protocol version 4) là phiên bản thứ tư của giao thức Internet (IP), một hệ thống địa chỉ số được sử dụng để định danh và truyền thông tin giữa các thiết bị kết nối với internet hoặc mạng nội bộ.
+
+> Địa chỉ IPv4 được biểu diễn dưới dạng chuỗi số, chia thành các nhóm được ngăn cách bằng dấu chấm, `ví dụ: 192.168.0.1`.
+
+> Mỗi thiết bị kết nối vào mạng sẽ được gán cho 1 địa chỉ IPv4 duy nhất.
 
 ## II. Tại sao lại không có IPv1,2,3,5 ?
 
 ### 1. IPv1 đến IPv3 là các phiên bản thử nghiệm nội bộ
 
-- IPv1, IPv2, và IPv3 thực chất đã từng tồn tại, nhưng chỉ trong giai đoạn nghiên cứu và phát triển ban đầu của giao thức IP.
-
-> Chúng không bao giờ được triển khai rộng rãi trên Internet.
-
-- Các phiên bản này được sử dụng trong những bản thảo hoặc các hệ thống thử nghiệm nội bộ tại DARLA hoặc các phòng lab phát triển Internet đầu tiên (như ARPANET).
+> Chúng không bao giờ được triển khai rộng rãi trên Internet vì chỉ là phiên bản thử nghiệm của tổ chức ARPANET
 
 ### 2. IPv4 là phiên bản đầu tiên được triển khai rộng rãi
 
@@ -22,43 +22,43 @@ IPv4 (Internet Protocol version 4) là phiên bản thứ tư của giao thức 
 
 ### 3. IPv5 tồn tại, nhưng không phải là phiên bản kế tiếp của IP
 
-- IPv5 thực ra đã từng được định nghĩa, nhưng nó không phải là một phiên bản IP để thay thế IPv4.
-
 - IPv5 là tên gọi của một giao thức thử nghiệm tên là ST (Stream Protocol), dùng để truyền dữ liệu thời gian thực (audio/video).
 
 > Vì ST đã được gán số phiên bản là 5, nên số này không thể được tái sử dụng cho một giao thức IP kế tiếp.
 
 ### 4. IPv6 là phiên bản tiếp theo chính thức
 
-> Khi người ta cần một phiên bản IP mới để giải quyết vấn đề thiếu địa chỉ IP, người ta tạo ra IPv6 và nhảy thẳng từ IPv4 lên IPv6, bỏ qua IPv5 để tránh nhầm lẫn với giao thức ST.
+- Khi người ta cần một phiên bản IP mới để giải quyết vấn đề thiếu địa chỉ IP, người ta tạo ra IPv6 và nhảy thẳng từ IPv4 lên IPv6, bỏ qua IPv5 để tránh nhầm lẫn với giao thức ST.
 
----
-
-## III. Cấu trúc của IPv4
+## III. Đặc điểm, Cấu trúc của IPv4
 
 ![ipv4 structure](./images/ipv4_structure.png)
 
-Sơ đồ cấu trúc của IPv4 Diagram
+**-Đặc điểm của IPv4:**
 
-- Địa chỉ IPv4 có cấu trúc 32-bit, được biểu diễn dưới dạng bốn số thập phân. Các số này được phân tách bằng dấu chấm, `ví dụ: 192.168.1.1`. Mỗi số trong dãy này được gọi là một “octet” và có giá trị từ 0 đến 255.
+- **Độ dài :** Địa chỉ IPv4 có độ dài 32-bit, chia thành 4 cụm 8 bit (gọi là các octet)
 
-- Mỗi octet tương ứng với 8 bit nhị phân. Khi kết hợp 4 octet lại, chúng ta có tổng cộng 32 bit. Cấu trúc này cho phép tạo ra khoảng 4,3 tỷ địa chỉ duy nhất. Ví dụ, địa chỉ 192.168.1.1 trong hệ nhị phân sẽ là
+- **Biểu diễn :** Được biểu diễn dưới dạng bốn số thập phân. Các số tách bằng dấu chấm. Mỗi số được gọi là một “octet” và có giá trị từ 0 đến 255.
 
-> 11000000.10101000.00000001.00000001
+`ví dụ: 192.168.1.1`
+
+- **Số địa chỉ :** Cấu trúc này cho phép tạo ra khoảng 4,3 tỷ địa chỉ duy nhất. Ví dụ, địa chỉ 192.168.1.1 trong hệ nhị phân sẽ là :
+
+`11000000.10101000.00000001.00000001`
 
 **-Một số quy tắc đặt địa chỉ IP phải tuân theo:**
 
 - Các bit phần mạng không được phép đồng thời bằng 0.
 
->VD: địa chỉ 0.0.0.1 với phần mạng là 0.0.0 và phần host là 1 là không hợp lệ.
+`VD: địa chỉ 0.0.0.1 với phần mạng là 0.0.0 và phần host là 1 là không hợp lệ.`
 
 - Nếu các bit phần host đồng thời bằng 0, ta có một địa chỉ mạng.
 
->VD: địa chỉ 192.168.1.1 là một địa chỉ có thể gán cho host nhưng địa chỉ 192.168.1.0 là một địa chỉ mạng, không thể gán cho host được.
+`VD: địa chỉ 192.168.1.1 là một địa chỉ có thể gán cho host nhưng địa chỉ 192.168.1.0 là một địa chỉ mạng, không thể gán cho host được`
 
-- Nếu các bit phần host đồng thời bằng 1, ta có một địa chỉ quảng bá (broadcast).
+- Nếu các **bit** phần host đồng thời bằng 1, ta có một địa chỉ quảng bá (broadcast).
 
--VD: địa chỉ 192.168.1.255 là một địa chỉ broadcast cho mạng 192.168.1.0
+`VD: địa chỉ 192.168.1.255 là một địa chỉ broadcast cho mạng 192.168.1.0`
 
 ![Sơ đồ ](./images/IPv4_structure2.png)
 
@@ -66,107 +66,91 @@ Sơ đồ cấu trúc của IPv4 Diagram
 
 Ban đầu, một địa chỉ IP được chia thành hai phần:
 
-- Network ID: -ID mạng còn được gọi là NetID là một bit cố định trong địa chỉ IP đại diện cho toàn bộ mạng của bất kỳ máy chủ nào được kết nối với mạng đó. Tức là, nó cho biết mạng của máy chủ mà máy chủ đó được kết nối.
-
-  -NET ID sử dụng tiền tố dựa trên lớp của nó. Các lớp A, B, C, D và E lần lượt sử dụng các tiền tố '0', '10', '110', '1110' và '1111 0'. Ngoài ra, như được thấy trong hình bên dưới, mỗi lớp có số lượng octet khác nhau được dành riêng cho Host ID. Lớp A dành 3 octet, lớp B dành 2 octet, lớp C dành 1 octet, và lớp D/E không có octet nào được dành riêng cho ID máy chủ.
-
-  -Kết hợp hai sự kiện này, chúng ta thấy rằng Lớp A, B, C, D và E sử dụng lần lượt 7, 14, 21, 28 và 27 bit cho ID mạng thực tế.
+>- **Network ID:** -ID mạng còn được gọi là NetID xác định mạng cụ thể nơi mà một hoặc nhiều hosts có thể được kết nối.
 
 ![NetID](./images/NetID.png)
 
-- Host ID: -Là địa chỉ IP định danh từng thiết bị trong hệ thống mạng.
+>- **Host ID**: -Là địa chỉ IP định danh từng thiết bị trong hệ thống mạng.
 
 ![HostID](./images/HostID.png)
+
+- **Lý do chia Network và Host**
+
+-Quản lý hiệu quả hơn: Trong một mạng lớn, việc chia địa chỉ thành phần network giúp định tuyến dễ dàng hơn. Router chỉ cần quan tâm đến phần network để định tuyến gói tin, thay vì phải xử lý từng thiết bị cụ thể.
+
+-Tiết kiệm tài nguyên: Nếu không chia network và host, toàn bộ 32 bit sẽ phải dùng để quản lý từng thiết bị duy nhất, làm lãng phí tài nguyên. Với cách chia này, nhiều thiết bị có thể chia sẻ cùng một phần network, tiết kiệm địa chỉ.
+
+-Hỗ trợ định tuyến: Phần network giúp các thiết bị (router) trên mạng biết cách gửi dữ liệu qua các mạng khác nhau mà không cần biết chi tiết từng thiết bị.
+
+-Phân chia trách nhiệm quản trị: Mỗi mạng con (subnet) có thể được giao cho một quản trị viên khác nhau. Điều này giúp phân tách quản trị mạng theo quy mô hoặc khu vực.
 
 ## V. Các lớp của IPv4
 
 ![all class of IPv4](./images/all_class_of_IPv4.png)
 
-Không gian IP address sẽ được chia thành nhiều lớp, bao gồm:
+### 1. Phân biệt theo giá trị và cấu trúc
 
-- Lớp A
-- Lớp B
-- Lớp C
-- Lớp D
-- Lớp E
+| Lớp | Phạm vi giá trị (thập phân) | Octet đầu (nhị phân) | Số bit cho mạng/host     |
+| --- | --------------------------- | -------------------- | ------------------------ |
+| A   | 0.0.0.0 - 127.255.255.255   | 0xxxxxxx             | 8 bit mạng, 24 bit host  |
+| B   | 128.0.0.0 - 191.255.255.255 | 10xxxxxx             | 16 bit mạng, 16 bit host |
+| C   | 192.0.0.0 - 223.255.255.255 | 110xxxxx             | 24 bit mạng, 8 bit host  |
+| D   | 224.0.0.0 - 239.255.255.255 | 1110xxxx             | Không chia mạng/host     |
+| E   | 240.0.0.0 - 255.255.255.255 | 1111xxxx             | Không chia mạng/host     |
 
-Lưu ý:
+### 2. Phân biệt theo chức năng và sử dụng
 
-Các lớp IP address có thể dùng đặt cho các host là các lớp A, B, C. Bạn có thể quan sát octet đầu của địa chỉ để xác định địa chỉ IP thuộc lớp nào. Phân loại như sau:
+### Phân biệt theo chức năng và sử dụng
 
-- 1 -> 126 Địa chỉ IP lớp A
-- 128 -> 191 Địa chỉ IP lớp B
-- 192 -> 223 Địa chỉ IP lớp C
-- 224 -> 239 Địa chỉ IP lớp D
-- 240 -> 255 Địa chỉ IP lớp E
-
-### 1. Lớp A
-
-![class_A](./images/class_A.png)
-
-- Địa chỉ IP lớp A dùng một octet đầu làm phần network, ba octet sau làm phần host.
-- Bit đầu của một IP lớp A luôn là 0.
-- Các địa chỉ mạng lớp A sẽ bao gồm: 1.0.0.0 -> 126.0.0.0.
-- Mạng 127.0.0.0 được sử dụng như mạng loopback.
-- Phần host có 24 bit => mỗi network lớp A có (2^24 – 2) host.
-- Có 126 mạng trong lớp A
-
-### 2. Lớp B
-
-![class B](./images/class_B.png)
-
-- Địa chỉ lớp B sử dụng 2 octet đầu làm phần mạng, 2 octet sau làm phần
-- 2 bit đầu của một IP lớp B sẽ luôn là 1 0.
-- Các địa chỉ mạng lớp B sẽ bao gồm: 128.0.0.0 -> 191.255.0.0.
-- Có tổng cộng 2^14 mạng trong lớp B
-- Phần host dài 16 bit, vì vậy một mạng lớp B có (2^16– 2) host.
-
-### 3. Lớp C
-
-![class C](./images/class_C.png)
-
-- IP lớp C sử dụng ba octet đầu làm phần network, một octet sau làm phần
-- Ba bit đầu của một IP lớp C luôn là 1 1 0.
-- Các địa chỉ mạng lớp C sẽ bao gồm: 192.0.0.0 -> 223.255.255.0. - - Có tổng cộng 2^21 mạng trong lớp C.
-- Phần host dài 8 bit vì vậy nên một mạng lớp C sẽ có (2^8– 2) host.
-
-### 4. Lớp D
-
-![class D](./images/class_D.png)
-
-- Lớp D được sử dụng làm các địa chỉ multicast và dải địa chỉ lớp D từ 224.0.0.0 -> 239.255.255.255.
-- Địa chỉ multicast trong IPv4 được sử dụng để truyền tải dữ liệu đa điểm trên mạng.được dùng để gửi dữ liệu đến một nhóm các thiết bị mạng.
-- Địa chỉ multicast được sử dụng trong nhiều ứng dụng mạng, chẳng hạn như truyền tải video trực tiếp, âm thanh, và các dịch vụ như IP TV và VoIP.
-
-### 5. Lớp E
-
-![class E](./images/class_E.png)
-
-- Từ 240.0.0.0 trở đi.
-- Thường sử dụng vào mục đích dự phòng
+| Lớp | Mục đích sử dụng                                                                           |
+| --- | ------------------------------------------------------------------------------------------ |
+| A   | Được thiết kế cho các tổ chức lớn với số lượng host nhiều (ISP, doanh nghiệp toàn cầu).    |
+| B   | Dành cho các tổ chức vừa và lớn như trường đại học, doanh nghiệp vừa.                      |
+| C   | Phục vụ các mạng nhỏ như văn phòng, tổ chức nhỏ, mạng gia đình.                            |
+| D   | Dùng cho truyền thông multicast, tức là gửi dữ liệu đến một nhóm máy tính cụ thể.          |
+| E   | Được dành riêng cho nghiên cứu hoặc sử dụng trong tương lai, không được sử dụng công khai. |
 
 ## VI. Phân biệt IP Public và IP Private
 
 ### 1. Địa chỉ IP Public
 
-- IP Public (hay IP công cộng) là địa chỉ IP được nhà cung cấp dịch vụ Internet cấp cho thiết bị modem hoặc router của bạn khi kết nối với Internet. Chúng đóng vai trò như địa chỉ nhà của thiết bị trên mạng Internet, giúp các thiết bị khác trên thế giới có thể xác định và kết nối với chúng.
+>-**IP Public (hay IP công cộng):** là địa chỉ IP được nhà cung cấp dịch vụ Internet cấp cho thiết bị modem hoặc router của bạn khi kết nối với Internet. Chúng đóng vai trò như địa chỉ nhà của thiết bị trên mạng Internet, giúp các thiết bị khác trên thế giới có thể xác định và kết nối với chúng.Và địa chỉ IP Public chia ra làm 2 loại:
+
+- **Địa chỉ IP động:** Địa chỉ IP động là một địa chỉ IP được cấp phát tự động cho một thiết bị bởi máy chủ DHCP (Dynamic Host Configuration Protocol) mỗi khi thiết bị kết nối vào mạng. Địa chỉ này có thể thay đổi sau mỗi lần kết nối hoặc sau một khoảng thời gian nhất định.
+
+- **Địa chỉ IP tĩnh:** Là một địa chỉ IP được gán cố định cho một thiết bị và không thay đổi theo thời gian. Địa chỉ này thường được gán thủ công bởi quản trị viên mạng hoặc được cấu hình trên thiết bị.
+
+-**So sánh địa chỉ IP động và IP tĩnh:**
+
+| Đặc điểm         | IP tĩnh                              | IP động                                          |
+| ---------------- | ------------------------------------ | ------------------------------------------------ |
+| Gán địa chỉ      | Thủ công hoặc cấu hình trên thiết bị | Tự động bởi máy chủ DHCP                         |
+| Thay đổi         | Không thay đổi                       | Thay đổi sau mỗi lần kết nối hoặc theo thời gian |
+| Ổn định truy cập | Rất ổn định                          | Khó khăn hơn, cần Dynamic DNS                    |
+| Quản lý          | Khó hơn, cần theo dõi cẩn thận       | Dễ dàng hơn, tự động bởi DHCP                    |
 
 ### 2. Địa chỉ IP Private
 
-- Địa chỉ IP private của hệ thống là địa chỉ IP được sử dụng để giao tiếp trong cùng một mạng. Thông tin hoặc dữ liệu IP private có thể được gửi hoặc nhận trong cùng một mạng.
+>**-Địa chỉ IP private** của hệ thống là địa chỉ IP được sử dụng để giao tiếp trong cùng một mạng. Thông tin hoặc dữ liệu IP private có thể được gửi hoặc nhận trong cùng một mạng.
 
-### 3.Phân biệt giữa IP Private và IP Public
+### 3. Phân biệt giữa IP Private và IP Public
 
-|**Đặc điểm**|**Địa chỉ IP Private**| **Địa chỉ IP Public**   |
-| --------------------- | ---------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| **Phạm vi**           | Cục bộ                                                                                                           | Toàn cầu                                                                            |
-| **Mục đích sử dụng**  | Giao tiếp trong mạng                                                                                             | Giao tiếp bên ngoài mạng                                                            |
-| **Đặc điểm địa chỉ**  | Địa chỉ IP private của các hệ thống được kết nối trong mạng sẽ khác nhau, nhưng vẫn theo một quy luật thống nhất | Địa chỉ IP public có thể khác nhau theo một quy luật đồng nhất hoặc không đồng nhất |
-| **Phạm vi hoạt động** | Chỉ hoạt động trong mạng LAN                                                                                     | Dùng để truy cập dịch vụ Internet                                                   |
-| **Quản lý**           | Được sử dụng để load hệ điều hành mạng                                                                           | Được kiểm soát bởi ISP (nhà cung cấp dịch vụ Internet)                              |
-| **Chi phí**           | Miễn phí                                                                                                         | Không miễn phí                                                                      |
-| **Cách kiểm tra**     | Nhập `ipconfig` vào Command Prompt                                                                               | Gõ "what is my ip" vào Google                                                       |
-| **Phạm vi địa chỉ/Dải Host**   | - 10.0.0.0 – 10.255.255.255 <br> - 172.16.0.0 – 172.31.255.255 <br> - 192.168.0.0 – 192.168.255.255              | Ngoại trừ các địa chỉ IP private, toàn bộ phần còn lại đều là IP public             |
+| **Đặc điểm**                 | **Địa chỉ IP Private**                                                                                           | **Địa chỉ IP Public**                                                                                                |
+| ---------------------------- | ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| **Phạm vi**                  | Cục bộ                                                                                                           | Toàn cầu                                                                                                             |
+| **Mục đích sử dụng**         | Giao tiếp trong mạng                                                                                             | Giao tiếp bên ngoài mạng                                                                                             |
+| **Đặc điểm địa chỉ**         | Địa chỉ IP private của các hệ thống được kết nối trong mạng sẽ khác nhau, nhưng vẫn theo một quy luật thống nhất | Địa chỉ IP public có thể khác nhau theo một quy luật đồng nhất hoặc không đồng nhất                                  |
+| **Phạm vi hoạt động**        | Chỉ hoạt động trong mạng LAN                                                                                     | Dùng để truy cập dịch vụ Internet                                                                                    |
+| **Quản lý**                  | Được sử dụng để load hệ điều hành mạng                                                                           | Được kiểm soát bởi ISP (nhà cung cấp dịch vụ Internet)                                                               |
+| **Chi phí**                  | Miễn phí                                                                                                         | Không miễn phí                                                                                                       |
+| **Cách kiểm tra**            | Nhập `ipconfig` vào Command Prompt                                                                               | Gõ "what is my ip" vào Google                                                                                        |
+| **Phạm vi địa chỉ/Dải Host** | - 10.0.0.0 – 10.255.255.255 <br> - 172.16.0.0 – 172.31.255.255 <br> - 192.168.0.0 – 192.168.255.255              | Ngoại trừ các địa chỉ IP private, toàn bộ phần còn lại đều là IP public, trừ địa chỉ 127.x.x.x là địa chỉ Local Host |
+
+### 4. Kỹ thuật NAT (Network Address Translation) được sử dụng để chuyển đổi giữa IP private và IP public
+
+VD: Khi một thiết bị trong mạng nội bộ (điện thoại, máy tính) muốn truy cập internet, nó sẽ gửi một gói tin đến router (thiết bị thực hiện chức năng NAT). Router sẽ thay thế địa chỉ IP private của thiết bị đó bằng địa chỉ IP public của chính nó (hoặc một địa chỉ IP public được cấu hình sẵn). Gói tin với địa chỉ IP public mới sẽ được gửi đi qua Internet. Khi có phản hồi từ Internet, router sẽ nhận được gói tin và dựa vào thông tin lưu trữ (bảng NAT) để xác định thiết bị nào trong mạng nội bộ là đích đến cuối cùng của gói tin. Router sẽ thay thế địa chỉ IP public trong gói tin trở lại thành địa chỉ IP private ban đầu và chuyển tiếp gói tin đến thiết bị đích.
+
+- **Địa chỉ IP private được sử dụng để bảo tồn địa chỉ IP public đang dần cạn kiệt:** IPv4 có chiều dài 32 bit để đánh địa chỉ, theo đó, số địa chỉ tối đa có thể sử dụng là 4.294.967.296 (2^32). Một số địa chỉ IP được sử dụng cho các mục đích khác như cấp cho mạng cá nhân (xấp xỉ 18 triệu địa chỉ), hoặc sử dụng làm địa chỉ quảng bá (xấp xỉ 16 triệu), nên số lượng địa chỉ thực tế có thể sử dụng cho mạng Internet công cộng bị giảm xuống. Thay vì mỗi thiết bị cần một địa chỉ Public, các thiết bị trong mạng nội bộ sử dụng địa chỉ Private. Router hoặc thiết bị NAT (Network Address Translation) dịch địa chỉ Private thành một địa chỉ Public duy nhất để giao tiếp với Internet, điều này cho phép hàng triệu thiết bị nội bộ sử dụng chung một địa chỉ Public. Địa chỉ Private không cần duy nhất trên toàn cầu, chúng có thể được sử dụng lại ở nhiều mạng khác nhau mà không gây xung đột (vì không được định tuyến trên Internet).
 
 ## VII. Cách chia địa chỉ IPv4
 

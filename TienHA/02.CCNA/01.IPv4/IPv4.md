@@ -92,11 +92,13 @@ Ban đầu, một địa chỉ IP được chia thành hai phần:
 
 | Lớp | Phạm vi giá trị (thập phân) | Octet đầu (nhị phân) | Số bit cho mạng/host     |
 | --- | --------------------------- | -------------------- | ------------------------ |
-| A   | 0.0.0.0 - 127.255.255.255   | 0xxxxxxx             | 8 bit mạng, 24 bit host  |
+| A   | 0.0.0.0 - 126.255.255.255   | 0xxxxxxx             | 8 bit mạng, 24 bit host  |
 | B   | 128.0.0.0 - 191.255.255.255 | 10xxxxxx             | 16 bit mạng, 16 bit host |
 | C   | 192.0.0.0 - 223.255.255.255 | 110xxxxx             | 24 bit mạng, 8 bit host  |
 | D   | 224.0.0.0 - 239.255.255.255 | 1110xxxx             | Không chia mạng/host     |
 | E   | 240.0.0.0 - 255.255.255.255 | 1111xxxx             | Không chia mạng/host     |
+
+- Cá biệt ta có địa chỉ 127.x.x.x là địa chỉ loopback dùng để kiểm tra kết nối mạng nội bộ trên cùng 1 máy tính.
 
 ### 2. Phân biệt theo chức năng và sử dụng
 
@@ -139,7 +141,6 @@ Ban đầu, một địa chỉ IP được chia thành hai phần:
 | ---------------------------- | ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 | **Phạm vi**                  | Cục bộ                                                                                                           | Toàn cầu                                                                                                             |
 | **Mục đích sử dụng**         | Giao tiếp trong mạng                                                                                             | Giao tiếp bên ngoài mạng                                                                                             |
-| **Đặc điểm địa chỉ**         | Địa chỉ IP private của các hệ thống được kết nối trong mạng sẽ khác nhau, nhưng vẫn theo một quy luật thống nhất | Địa chỉ IP public có thể khác nhau theo một quy luật đồng nhất hoặc không đồng nhất                                  |
 | **Phạm vi hoạt động**        | Chỉ hoạt động trong mạng LAN                                                                                     | Dùng để truy cập dịch vụ Internet                                                                                    |
 | **Quản lý**                  | Được sử dụng để load hệ điều hành mạng                                                                           | Được kiểm soát bởi ISP (nhà cung cấp dịch vụ Internet)                                                               |
 | **Chi phí**                  | Miễn phí                                                                                                         | Không miễn phí                                                                                                       |

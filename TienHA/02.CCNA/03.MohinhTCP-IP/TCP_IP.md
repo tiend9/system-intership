@@ -254,9 +254,7 @@ Phụ thuộc vào loại mạng cụ thể (Ethernet, Wifi, cáp quang, v.v.).
 
 - Sau khi hoàn thành bắt tay ba bước chúng ta có thể gửi các phân đoạn Segment với nhau.
 
-```mark down
-Ví dụ: Máy cá nhân gửi Segment X tới máy chủ, máy chủ sẽ gửi lại 1 ACK Segment x thôn báo nhận được thành công. Ngược lại máy chủ gửi 1 Segment Y tới máy khách thì máy khách cũng gửi 1 ACK Segment Y ngược lại máy chủ thông báo nhận được thành công. Trong trường hợp 1 thời gian nhất định máy tính gửi không nhận được tin nhắn ACK Segment từ máy nhận thì sẽ tự động gửi lại.
-```
+- Ví dụ: Máy cá nhân gửi Segment X tới máy chủ, máy chủ sẽ gửi lại 1 ACK Segment x thôn báo nhận được thành công. Ngược lại máy chủ gửi 1 Segment Y tới máy khách thì máy khách cũng gửi 1 ACK Segment Y ngược lại máy chủ thông báo nhận được thành công. Trong trường hợp 1 thời gian nhất định máy tính gửi không nhận được tin nhắn ACK Segment từ máy nhận thì sẽ tự động gửi lại.
 
 > Ưu điểm của Three way handshake
 >

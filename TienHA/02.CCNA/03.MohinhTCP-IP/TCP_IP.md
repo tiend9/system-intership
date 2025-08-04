@@ -229,18 +229,18 @@ Phụ thuộc vào loại mạng cụ thể (Ethernet, Wifi, cáp quang, v.v.).
 
 **-Cấu trúc của TCP header:** TCP gói mỗi gói dữ liệu bằng một tiêu đề chứa 10 trường bắt buộc, tổng cộng 20 byte (hoặc octet). Mỗi tiêu đề chứa thông tin về kết nối và dữ liệu hiện tại đang được gửi.
 
-| Tên trường TCP                      | Chức năng                                                               |
-| ----------------------------------- | ----------------------------------------------------------------------- |
-| Cổng nguồn                          | Cổng của thiết bị gửi dữ liệu.                                          |
-| Cổng đích                           | Cổng của thiết bị nhận dữ liệu.                                         |
-| Số thứ tự                           | Dùng để đánh số thứ tự gói tin trong kết nối TCP để truyền đúng thứ tự. |
-| Số xác nhận                         | Xác nhận đã nhận được dữ liệu từ bên gửi.                               |
-| Độ lệch dữ liệu TCP                 | Chỉ định kích thước của tiêu đề TCP.                                    |
-| Dữ liệu được dành riêng             | Trường dành riêng, luôn được đặt thành số không.                        |
-| Cờ điều khiển                       | Điều khiển quản lý luồng dữ liệu (ví dụ: bắt đầu, kết thúc phiên…).     |
-| Tổng kiểm tra TCP kích thước cửa sổ | Dùng để kiểm tra lỗi dữ liệu và quản lý kích thước cửa sổ nhận.         |
-| Con trỏ khẩn cấp                    | Dùng khi cờ URG bật, xác định độ lệch đến byte khẩn cấp cuối cùng.      |
-| Dữ liệu tùy chọn mTCP               | Cho phép mở rộng các tính năng (như kích thước phân đoạn, kiểm soát…).  |
+| Tên trường TCP      | Chức năng                                                               |
+| ------------------- | ----------------------------------------------------------------------- |
+| Source Port         | Cổng của thiết bị gửi dữ liệu.                                          |
+| Destination Port    | Cổng của thiết bị nhận dữ liệu.                                         |
+| Sequences Number    | Dùng để đánh số thứ tự gói tin trong kết nối TCP để truyền đúng thứ tự. |
+| Confirm Number      | Xác nhận đã nhận được dữ liệu từ bên gửi.                               |
+| TCP offset Data     | Chỉ định kích thước của tiêu đề TCP.                                    |
+| Data reserved       | Trường dành riêng, luôn được đặt thành số không.                        |
+| Control Flag        | Điều khiển quản lý luồng dữ liệu (ví dụ: bắt đầu, kết thúc phiên…).     |
+| TCP Window Checksum | Dùng để kiểm tra lỗi dữ liệu và quản lý kích thước cửa sổ nhận.         |
+| Emergency Pointer   | Dùng khi cờ URG bật, xác định độ lệch đến byte khẩn cấp cuối cùng.      |
+| TCP Option Data     | Cho phép mở rộng các tính năng (như kích thước phân đoạn, kiểm soát…).  |
 
 **-Bắt tay ba bước ( Three way handshake):**
 

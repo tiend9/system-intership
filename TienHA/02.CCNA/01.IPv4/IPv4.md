@@ -145,7 +145,7 @@ Ban đầu, một địa chỉ IP được chia thành hai phần:
 | **Quản lý**                  | Được sử dụng để load hệ điều hành mạng                                                                           | Được kiểm soát bởi ISP (nhà cung cấp dịch vụ Internet)                                                               |
 | **Chi phí**                  | Miễn phí                                                                                                         | Không miễn phí                                                                                                       |
 | **Cách kiểm tra**            | Nhập `ipconfig` vào Command Prompt                                                                               | Gõ "what is my ip" vào Google                                                                                        |
-| **Phạm vi địa chỉ/Dải Host** | - 10.0.0.0 – 10.255.255.255 <br> - 172.16.0.0 – 172.31.255.255 <br> - 192.168.0.0 – 192.168.255.255              | Ngoại trừ các địa chỉ IP private, toàn bộ phần còn lại đều là IP public, trừ địa chỉ 127.x.x.x là địa chỉ Local Host |
+| **Phạm vi địa chỉ/Dải Host** | - 10.0.0.0 – 10.255.255.255 <br>- 172.16.0.0– 172.31.255.255<br>- 192.168.0.0 – 192.168.255.255| Ngoại trừ các địa chỉ IP private, toàn bộ phần còn lại đều là IP public, trừ địa chỉ 127.x.x.x là địa chỉ Local Host |
 
 ### 4. Kỹ thuật NAT (Network Address Translation) được sử dụng để chuyển đổi giữa IP private và IP public
 

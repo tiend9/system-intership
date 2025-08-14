@@ -131,7 +131,7 @@ Kiểm tra đường mạng
 R2#show ip route ospf
 ```
 
-[R2](./lab_images/R2.png)
+![R2](./lab_images/R2.png)
 
 ### 4. Gửi tập tin từ PC1 đến PC2
 

@@ -36,13 +36,13 @@
 
 **Hop count:** là một số liệu chỉ định số lần truyền qua các thiết bị kết nối internet như bộ routing
 
-**Độ trễ:** Là khoảng thời gian do bộ routing thực hiện để xử lý, xếp hàng và truyền một gói dữ liệu tới một giao diện.
+**Độ trễ(Delay):** Là khoảng thời gian do bộ routing thực hiện để xử lý, xếp hàng và truyền một gói dữ liệu tới một giao diện.
 
-**Băng thông:** Băng thông được đo bằng bit trên giây.Nó xác định dung lượng data cho tất cả các liên kết dọc theo đường dẫn.
+**Băng thông:(Bandwidth)** Băng thông được đo bằng bit trên giây.Nó xác định dung lượng data cho tất cả các liên kết dọc theo đường dẫn.
 
-**Tải:** Tải cho biết mức độ mà tài nguyên mạng như bộ routing hoặc liên kết mạng đang bận.
+**Tải:(Load)** Tải cho biết mức độ mà tài nguyên mạng như bộ routing hoặc liên kết mạng đang bận.
 
-**Độ tin cậy:** là một yếu tố thước đo có thể bao gồm một giá trị cố định. Bất kỳ hệ số độ tin cậy nào cũng có thể được xem xét để chỉ định xếp hạng độ tin cậy, thường là các giá trị số được chỉ định bởi người quản trị hệ thống.
+**Độ tin cậy:(Reliability)** là một yếu tố thước đo có thể bao gồm một giá trị cố định. Bất kỳ hệ số độ tin cậy nào cũng có thể được xem xét để chỉ định xếp hạng độ tin cậy, thường là các giá trị số được chỉ định bởi người quản trị hệ thống.
 
 ### 3. Các thành phần chính của Routing
 

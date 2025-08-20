@@ -32,17 +32,17 @@
 
 -Đối với một số giao thức sử dụng số liệu tĩnh có nghĩa là giá trị của chúng không thể thay đổi được và đối với một số giao thức routing khác, sử dụng số liệu động nghĩa là giá trị của chúng có thể được chỉ định bởi quản trị viên hệ thống.
 
-- **Các giá trị chỉ số phổ biến nhất được đưa ra dưới đây:**
+-**Các giá trị chỉ số phổ biến nhất được đưa ra dưới đây:**
 
-**Hop count:** là một số liệu chỉ định số lần truyền qua các thiết bị kết nối internet như bộ routing
+- **Hop count:** là một số liệu chỉ định số lần truyền qua các thiết bị kết nối internet như bộ routing
 
-**Độ trễ(Delay):** Là khoảng thời gian do bộ routing thực hiện để xử lý, xếp hàng và truyền một gói dữ liệu tới một giao diện.
+- **Độ trễ(Delay):** Là khoảng thời gian do bộ routing thực hiện để xử lý, xếp hàng và truyền một gói dữ liệu tới một giao diện.
 
-**Băng thông:(Bandwidth)** Băng thông được đo bằng bit trên giây.Nó xác định dung lượng data cho tất cả các liên kết dọc theo đường dẫn.
+- **Băng thông:(Bandwidth)** Băng thông được đo bằng bit trên giây.Nó xác định dung lượng data cho tất cả các liên kết dọc theo đường dẫn.
 
-**Tải:(Load)** Tải cho biết mức độ mà tài nguyên mạng như bộ routing hoặc liên kết mạng đang bận.
+- **Tải:(Load)** Tải cho biết mức độ mà tài nguyên mạng như bộ routing hoặc liên kết mạng đang bận.
 
-**Độ tin cậy:(Reliability)** là một yếu tố thước đo có thể bao gồm một giá trị cố định. Bất kỳ hệ số độ tin cậy nào cũng có thể được xem xét để chỉ định xếp hạng độ tin cậy, thường là các giá trị số được chỉ định bởi người quản trị hệ thống.
+- **Độ tin cậy:(Reliability)** là một yếu tố thước đo có thể bao gồm một giá trị cố định. Bất kỳ hệ số độ tin cậy nào cũng có thể được xem xét để chỉ định xếp hạng độ tin cậy, thường là các giá trị số được chỉ định bởi người quản trị hệ thống.
 
 ### 3. Các thành phần chính của Routing
 
@@ -67,13 +67,13 @@ Destination      Gateway        Interface
 
 **Giao thức định tuyến (Routing Protocol):**
 
-Các giao thức như RIP, OSPF, BGP được sử dụng để tự động cập nhật bảng định tuyến.
+- Các giao thức như RIP, OSPF, BGP được sử dụng để tự động cập nhật bảng định tuyến.
 
-Giúp router học và chia sẻ thông tin về các đường đi trong mạng.
+- Giúp router học và chia sẻ thông tin về các đường đi trong mạng.
 
 ## II. CHỨC NĂNG ROUTING
 
--Các bộ định tuyến chủ yếu đảm nhận ba chức năng chính:
+-Các bộ định tuyến chủ yếu đảm nhận **ba chức năng chính**:
 
 - **Xác định đường dẫn:** Bộ định tuyến cố gắng tìm đường dẫn tốt nhất bằng cách phân tích các chỉ số mạng như độ trì hoãn, bước nhảy và tốc độ.
 
@@ -102,7 +102,7 @@ Cấu hình trên router cisco
 
 ![staticrouting](./images/Staticrouting.png)
 
-_Nhược điểm của routing tĩnh:_
+-Nhược điểm của routing tĩnh:
 
 - Không có khả năng tự động cập nhật đường đi.
 
@@ -116,13 +116,13 @@ _Nhược điểm của routing tĩnh:_
 
 ### 2. Định tuyến mặc định (Default Routing)
 
-- Routing mặc định là một kỹ thuật trong đó một bộ routing được cấu hình để gửi tất cả các gói đến cùng một thiết bị hop và không quan trọng nó có thuộc một mạng cụ thể hay không. Gói được truyền tới thiết bị mà nó được cấu hình trong
+-Routing mặc định là một kỹ thuật trong đó một bộ routing được cấu hình để gửi tất cả các gói đến cùng một thiết bị hop và không quan trọng nó có thuộc một mạng cụ thể hay không. Gói được truyền tới thiết bị mà nó được cấu hình trong
 
-- Routing mặc định. Routing mặc định được sử dụng khi mạng xử lý một điểm thoát duy nhất.
+-Routing mặc định. Routing mặc định được sử dụng khi mạng xử lý một điểm thoát duy nhất.
 
-- Nó cũng hữu ích khi phần lớn các mạng truyền tải phải truyền dữ liệu đến cùng một thiết bị hp.
+-Nó cũng hữu ích khi phần lớn các mạng truyền tải phải truyền dữ liệu đến cùng một thiết bị hp.
 
-- Khi một tuyến đường cụ thể được đề cập trong bảng routing, bộ routing sẽ chọn tuyến đường cụ thể hơn là tuyến đường mặc định. Tuyến đường mặc định chỉ được chọn khi một tuyến đường cụ thể không được đề cập trong bảng routing.
+-Khi một tuyến đường cụ thể được đề cập trong bảng routing, bộ routing sẽ chọn tuyến đường cụ thể hơn là tuyến đường mặc định. Tuyến đường mặc định chỉ được chọn khi một tuyến đường cụ thể không được đề cập trong bảng routing.
 
 **VD:**
 
@@ -130,9 +130,9 @@ _Nhược điểm của routing tĩnh:_
 
 ### 3.Định tuyến động (Dynamic routing)
 
-- Các router sẽ tự động trao đổi thông tin để tính toán đường đi tốt nhất cho gói tin.
+-Các router sẽ tự động trao đổi thông tin để tính toán đường đi tốt nhất cho gói tin.
 
-- Sử dụng các giao thức định tuyến động như RIP, OSPF, EIGRP, BGP.
+-Sử dụng các giao thức định tuyến động như RIP, OSPF, EIGRP, BGP.
   Phù hợp với các mạng lớn, có sự thay đổi thường xuyên.
 
 | Giao thức                                          | Loại            | Tốc độ hội tụ | Sử dụng                  |
@@ -146,7 +146,7 @@ _Nhược điểm của routing tĩnh:_
 
 ## IV. Các thuật toán routing
 
-Các giao thức định tuyến sử dụng các thuật toán khác nhau để tìm ra đường đi tối ưu.
+-Các giao thức định tuyến sử dụng các thuật toán khác nhau để tìm ra đường đi tối ưu.
 
 - Distance Vector (Khoảng cách – hướng đi)
 

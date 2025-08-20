@@ -26,7 +26,7 @@
 
 ### 2. Chỉ số và các giá trị routing
 
--Các chỉ số và chi phí routing được sử dụng để xác routing đường tốt nhất đến điểm đến. Các yếu tố được sử dụng bởi các giao thức để xác định đường đi ngắn nhất, những yếu tố này được gọi là một thước đo.
+-Các **chỉ số** và chi phí routing được sử dụng để xác routing đường tốt nhất đến điểm đến. Các yếu tố được sử dụng bởi các giao thức để xác định đường đi ngắn nhất, những yếu tố này được gọi là một thước đo.
 
 -**Chỉ số** là các **biến mạng** được sử dụng để xác định đường đi tốt nhất đến đích.
 

@@ -97,31 +97,31 @@ Hạn chế bởi số lượng địa chỉ IP công cộng trong pool.
 
 **Cấu hình Dynamic NAT:**
 
-- Xác định địa chỉ IP Public:
+-Xác định địa chỉ IP Public:
 
 ```ruby
 Router (config) # ip nat pool [name start ip] [name end ip] netmask [netmask]/prefix-lenght [prefix-lenght]
 ```
 
-- Thiết lập ACL để tạo danh sách các địa chỉ Private được phép chuyển đổi IP:
+-Thiết lập ACL để tạo danh sách các địa chỉ Private được phép chuyển đổi IP:
 
 ```ruby
 Router (config) # access-list [access-list-number-permit] source [source-wildcard]
 ```
 
-- Thiết lập mối quan hệ giữa địa chỉ nguồn và đại chỉ IP bên ngoài:
+-Thiết lập mối quan hệ giữa địa chỉ nguồn và đại chỉ IP bên ngoài:
 
 ```ruby
 Router (config) # ip nat inside source list <acl-number> pool <name>
 ```
 
-- Xác định cổng kết nối với mạng cục bộ:
+-Xác định cổng kết nối với mạng cục bộ:
 
 ```ruby
 Router (config-if) # ip nat inside
 ```
 
-- Xác định cổng kết nối với mạng bên ngoài:
+-Xác định cổng kết nối với mạng bên ngoài:
 
 ```ruby
 Router (config-if) # ip nat outside
@@ -161,25 +161,25 @@ NAT Overload là một phiên bản mở rộng của NAT động, trong đó á
 
 **Cấu hình NAT Overload:**
 
-- Xác định địa chỉ IP mạng nội bộ cần ánh xạ bên ngoài:
+-Xác định địa chỉ IP mạng nội bộ cần ánh xạ bên ngoài:
 
 ```ruby
 Router (config) # access-list <ACL-number> permit <source> <wildcard>
 ```
 
-- Cấu hình để chuyển IP đến cổng kết nối bên ngoài:
+-Cấu hình để chuyển IP đến cổng kết nối bên ngoài:
 
 ```ruby
 Router (config) # ip nat inside source list <ACL-number> interface <interface> overload
 ```
 
-Xác định nết nối với mạng nội bộ:
+-Xác định nết nối với mạng nội bộ:
 
 ```ruby
 Router (config-if) # ip nat inside
 ```
 
-Xác định các cổng kết nối với mạng bên ngoài:
+-Xác định các cổng kết nối với mạng bên ngoài:
 
 ```ruby
 Router (config-if) # ip nat outside

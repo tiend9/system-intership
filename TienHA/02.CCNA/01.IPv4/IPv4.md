@@ -221,7 +221,7 @@ Mạng 4: 192.168.1.193 đến 192.168.1.254
 > Khi chia subnet, hãy đảm bảo rằng không có địa chỉ IP nào bị trùng lặp.
 > Trong một số trường hợp, bạn có thể sử dụng kỹ thuật VSSM (Variable Length Subnet Masking) để chia subnet hiệu quả hơn.
 
-## VIII. Phân biệt MultiCast và BoardCast
+## VIII. Phân biệt MultiCast và BoardCast và Default Gateway
 
 ### Broadcast
 
@@ -254,3 +254,27 @@ Subnet mask là một dạng số nhị phân 32bit, cho phép người sử d�
   có thể căn cứ vào đó xác định được địa chỉ mạng tương ứng của địa chỉ này. Vì vậy, khi khai báo một địa chỉ IP ta luôn phải khai báo kèm theo một subnet mask. Tuy nhiên, subnet mask dù đã được viết dưới dạng số thập phân vẫn khá dài dòng nên để mô tả một địa chỉ IP một cách ngắn gọn hơn, người ta dùng một đại lượng được gọi là số prefix. Số prefix đơn giản chỉ là số bit NET trong một địa chỉ IP, được viết ngay sau địa chỉ IP, và được ngăn cách với địa chỉ này bằng một dấu “/”.
 
 - Nguyên lý cơ bản của kỹ thuật chia subnet: Để có thể chia nhỏ một mạng lớn thành nhiều mạng con bằng nhau, người ta thực hiện mượn thêm một số bit bên phần host để làm phần mạng, các bit mượn này được gọi là các bit subnet. Tùy thuộc vào số bit subnet mà ta có được các số lượng các mạng con khác nhau với các kích cỡ khác nhau.
+
+### Default Gateway
+
+Là địa chỉ đầu tiên có thể sử dụng được trong mạng con 
+
+**Ví dụ:**
+
+Địa chỉ IP của máy tính là 172.30.197.201/21. Cổng mặc định của máy tính là địa chỉ có thể sử dụng đầu tiên của mạng con.
+
+Địa chỉ IP của cổng mặc định là gì?
+
+172.30.193.0
+
+`172.30.192.1` (Đáp án)
+
+172.30.196.1
+
+172.30.194.1
+
+**Giải thích**
+
+- Để tìm **Usuable address** đầu tiên của mạng con, hãy chuyển đổi các bit phần host thành 0 rồi cộng thêm 1 địa chỉ là ra **Deafault Gateway**. 
+
+- Hai octet cuối cùng của địa chỉ là 197 (11000101) và 201 (11001001). Độ dài tiền tố là /21, vì vậy 11 bit cuối cùng là phần host. Đổi các bit phần host thành 0 sẽ cho kết quả là 192 (11000000) và 0 (00000000), do đó địa chỉ mạng là 172.30.192.0, và địa chỉ khả dụng đầu tiên (địa chỉ IP của **Default Gateway**) là 172.30.192.1.

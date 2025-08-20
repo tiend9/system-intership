@@ -9,7 +9,7 @@
 ### **Khái niệm BGP**
 
 **BGP (Border Gateway Protocol)** một giao thức định hình hệ thống định tuyến của Internet. Nó là một trong những giao thức quan trọng nhất được sử dụng để trao đổi thông tin định tuyến giữa các hệ thống định tuyến (router) trên Internet.
-22222222222222222222222222222233333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333
+
 Giao thức này chủ yếu được sử dụng giữa các nhà cung cấp dịch vụ Internet (ISP) và các tổ chức lớn có nhu cầu duy trì sự kết nối Internet độc lập. Nó cho phép các hệ thống định tuyến trao đổi thông tin về các mạng IP mà chúng có thể định tuyến, giúp xác định đường dẫn tối ưu để chuyển tiếp gói tin giữa các mạng này.
 
 ### **Cách thức hoạt động BGP**

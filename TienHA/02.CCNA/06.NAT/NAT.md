@@ -6,35 +6,21 @@
 
 Giải pháp lâu dài đó là chuyển địa chỉ từ IPv4 sang IPv6 nhưng đổi tất cả các thiết bị từ IPv4 =>IPv6 là 1 công việc rất phức tạp cho nên ta cần 1 giải pháp tạm thời đó là:
 
-    1. CIDR(Classes Inter-Domain Routing): Quên đi các lớp Ip-Domain cứng nhắc mà thay vào đó sử dụng độ dài tiền tố theo bất cứ cách nào mà mình thích mà không cần quan tâm đến lớp
-    2. Địa chỉ Private IPv4
-    3. NAT
+1. CIDR(Classes Inter-Domain Routing): Quên đi các lớp Ip-Domain cứng nhắc mà thay vào đó sử dụng độ dài tiền tố theo bất cứ cách nào mà mình thích mà không cần quan tâm đến lớp
+2. Địa chỉ Private IPv4
+3. NAT
 
 RFC 1918 quy định các dải địa chỉ IPv4 sau đây là dải địa chỉ riêng tư:
 
-    1. 10.x.x.x/8
-    2. 172.16.x.x => 172.31.x.x/12
-    3. 192.168.x.x/16
+1. 10.x.x.x/8
+2. 172.16.x.x => 172.31.x.x/12
+3. 192.168.x.x/16
 
 Bởi vì các ISP chặn lưu lượng truy cập hoặc đi từ các địa chỉ IP Private cho nên ta phải dùng 1 cách khác để có thể truy cập Internet từ PC cá nhân của chúng ta trong mạng LAN của nhà tới Internet bằng cách dùng **kĩ thuật NAT**
 
 ## I. NAT LÀ GÌ ?
 
 ![egNAT](./images/egNAT.png)
-
-`Giả sử ta có 1 kết nối như trên`
-
-Bên trái là PC của cá nhân với địa chỉ 192.168.0.167 được kết nối với Router Interface với địa chỉ 192.169.0.1. Ở bên phải cũng là một PC khác với địa chỉ 192.168.0.167 được kết nối với Router Interface với địa chỉ 192.168.0.1 và ta thấy cả 2 PC đều có chung địa chỉ IP.
-
-`Nếu không có NAT thì sẽ có 2 vấn đề lớn xảy ra:`
-
-1. Có những địa chỉ trùng lặp
-
-2. Địa chỉ IP Private không được sử dụng qua Internet cho nên máy tính không sử dụng được Internet
-
-=> Cho nên NAT sẽ giải quyết 2 vấn đề này. Ngoài ra, để kết nối được với Internet bên ngoài thì phải cần có 1 cổng Interface Router kết nối với địa chỉ IP Public lần lượt là 203.0.113.1 và 203.0.113.5
-
-_Khác với địa chỉ IPv4 Private là không duy nhất thì địa chỉ Public phải là duy nhất._
 
 **Khái niệm:** NAT viết tắt của Network Address Translation, là một kỹ thuật chuyển đổi giữa IP Private và IP Public. Quá trình chuyển đổi này hỗ trợ các thiết bị trong mạng cục bộ truy cập dễ dàng vào Internet.
 
@@ -55,6 +41,8 @@ _Khác với địa chỉ IPv4 Private là không duy nhất thì địa chỉ P
 - **Outside Global:** Địa chỉ IP ứng với thiết bị hoạt động tại hệ thống mạng bên ngoài, hoàn toàn hợp lệ với mạng internet.
 
 ## II. PHÂN LOẠI NAT
+
+![type](./images/type.png)
 
 ### 1. STATIC NAT
 
@@ -104,9 +92,7 @@ Router (config-if) # ip nat outside
 
 **Ưu điểm:** Tiết kiệm địa chỉ IP công cộng hơn NAT tĩnh vì không cần ánh xạ cố định.
 
-**Nhược điểm:**
-
-Địa chỉ IP công cộng thay đổi thường xuyên, gây khó khăn cho việc thiết lập các kết nối từ ngoài vào mạng nội bộ.
+**Nhược điểm:** Địa chỉ IP công cộng thay đổi thường xuyên, gây khó khăn cho việc thiết lập các kết nối từ ngoài vào mạng nội bộ.
 Hạn chế bởi số lượng địa chỉ IP công cộng trong pool.
 
 **Cấu hình Dynamic NAT:**

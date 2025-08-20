@@ -4,21 +4,17 @@
 
 Địa chỉ IP Public không cung cấp đủ địa chỉ cho tất cả các thiết bị cần địa chỉ IP trên thế giới hiện nay
 
-Giải pháp lâu dài đó là chuyển địa chỉ từ IPv4 sang IPv6 nhưng đổi tất cả các thiết bị từ IPv4 ->IPv6 là 1 công việc rất phức tạp cho nên ta cần 1 giải pháp tạm thời đó là:
+Giải pháp lâu dài đó là chuyển địa chỉ từ IPv4 sang IPv6 nhưng đổi tất cả các thiết bị từ IPv4 =>IPv6 là 1 công việc rất phức tạp cho nên ta cần 1 giải pháp tạm thời đó là:
 
-1. CIDR(Classes Inter-Domain Routing): Quên đi các lớp Ip-Domain cứng nhắc mà thay vào đó sử dụng độ dài tiền tố theo bất cứ cách nào mà mình thích mà không cần quan tâm đến lớp
-
-2. Địa chỉ Private IPv4
-
-3. NAT
+    1. CIDR(Classes Inter-Domain Routing): Quên đi các lớp Ip-Domain cứng nhắc mà thay vào đó sử dụng độ dài tiền tố theo bất cứ cách nào mà mình thích mà không cần quan tâm đến lớp
+    2. Địa chỉ Private IPv4
+    3. NAT
 
 RFC 1918 quy định các dải địa chỉ IPv4 sau đây là dải địa chỉ riêng tư:
 
-1. 10.x.x.x/8
-
-2. 172.16.x.x => 172.31.x.x/12
-
-3. 192.168.x.x/16
+    1. 10.x.x.x/8
+    2. 172.16.x.x => 172.31.x.x/12
+    3. 192.168.x.x/16
 
 Bởi vì các ISP chặn lưu lượng truy cập hoặc đi từ các địa chỉ IP Private cho nên ta phải dùng 1 cách khác để có thể truy cập Internet từ PC cá nhân của chúng ta trong mạng LAN của nhà tới Internet bằng cách dùng **kĩ thuật NAT**
 
@@ -26,19 +22,19 @@ Bởi vì các ISP chặn lưu lượng truy cập hoặc đi từ các địa c
 
 ![egNAT](./images/egNAT.png)
 
-Giả sử ta có 1 kết nối như trên
+`Giả sử ta có 1 kết nối như trên`
 
 Bên trái là PC của cá nhân với địa chỉ 192.168.0.167 được kết nối với Router Interface với địa chỉ 192.169.0.1. Ở bên phải cũng là một PC khác với địa chỉ 192.168.0.167 được kết nối với Router Interface với địa chỉ 192.168.0.1 và ta thấy cả 2 PC đều có chung địa chỉ IP.
 
-Nếu không có NAT thì sẽ có 2 vấn đề lớn xảy ra:
+`Nếu không có NAT thì sẽ có 2 vấn đề lớn xảy ra:`
 
 1. Có những địa chỉ trùng lặp
 
 2. Địa chỉ IP Private không được sử dụng qua Internet cho nên máy tính không sử dụng được Internet
 
-Cho nên NAT sẽ giải quyết 2 vấn đề này. Ngoài ra, để kết nối được với Internet bên ngoài thì phải cần có 1 cổng Interface Router kết nối với địa chỉ IP lần lượt là 203.0.113.1 và 203.0.113.5
+=> Cho nên NAT sẽ giải quyết 2 vấn đề này. Ngoài ra, để kết nối được với Internet bên ngoài thì phải cần có 1 cổng Interface Router kết nối với địa chỉ IP Public lần lượt là 203.0.113.1 và 203.0.113.5
 
-Khác với địa chỉ IPv4 Private là không duy nhất thì địa chỉ Public phải là duy nhất.
+_Khác với địa chỉ IPv4 Private là không duy nhất thì địa chỉ Public phải là duy nhất._
 
 **Khái niệm:** NAT viết tắt của Network Address Translation, là một kỹ thuật chuyển đổi giữa IP Private và IP Public. Quá trình chuyển đổi này hỗ trợ các thiết bị trong mạng cục bộ truy cập dễ dàng vào Internet.
 
@@ -52,11 +48,11 @@ Khác với địa chỉ IPv4 Private là không duy nhất thì địa chỉ Pu
 
 **Một số thuật ngữ dùng trong NAT:**
 
-**Inside Local:** Địa chỉ IP ứng với mỗi thiết bị nằm trong mạng nội bộ nhưng không cung cấp bởi Network Information Center, thường là IP Private.
+- **Inside Local:** Địa chỉ IP ứng với mỗi thiết bị nằm trong mạng nội bộ nhưng không cung cấp bởi Network Information Center, thường là IP Private.
 
-**Inside Global:** Kiểu địa chỉ IP đăng ký tại Network Information Center. Đây là địa chỉ phù hợp để thay thế cho IP Inside local.
+- **Inside Global:** Kiểu địa chỉ IP đăng ký tại Network Information Center. Đây là địa chỉ phù hợp để thay thế cho IP Inside local.
 
-**Outside Global:** Địa chỉ IP ứng với thiết bị hoạt động tại hệ thống mạng bên ngoài, hoàn toàn hợp lệ với mạng internet.
+- **Outside Global:** Địa chỉ IP ứng với thiết bị hoạt động tại hệ thống mạng bên ngoài, hoàn toàn hợp lệ với mạng internet.
 
 ## II. PHÂN LOẠI NAT
 
@@ -293,4 +289,3 @@ Quá trình này thường diễn ra tại router hoặc firewall để quản l
 | **Thứ tự hoạt động**    | Sau khi quyết định định tuyến được thực hiện.                                                                                                | Trước khi xác định quyết định định tuyến.                                                                                                                                                                                               |
 | **Luồng giao tiếp**     | Xảy ra khi bên trong mạng được bảo mật bắt đầu giao tiếp với bên ngoài.                                                                      | Xảy ra khi mạng không an toàn bên ngoài (public network) muốn giao tiếp với bên trong (private network).                                                                                                                                |
 | **Đơn/đa máy chủ**      | SNAT cho phép nhiều máy chủ bên trong mạng truy cập vào bất kỳ máy chủ nào bên ngoài.                                                        | DNAT cho phép một máy chủ bên ngoài truy cập vào một hoặc một nhóm máy chủ bên trong.                                                                                                                                                   |
-

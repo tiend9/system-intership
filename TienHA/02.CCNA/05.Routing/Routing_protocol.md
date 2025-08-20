@@ -1,7 +1,7 @@
 # ROUTING PROTOCOL
 
 ![protocol](./images/protocol.png)
-0
+
 ## BGP (Border Gateway Protocol)
 
 ![BGP](./images/BGP.png)

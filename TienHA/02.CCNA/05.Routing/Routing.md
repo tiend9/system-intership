@@ -106,9 +106,9 @@ _Nhược điểm của routing tĩnh:_
 
 - Không có khả năng tự động cập nhật đường đi.
 
--Phải cấu hình thủ công khi mạng có sự thay đổi.
+- Phải cấu hình thủ công khi mạng có sự thay đổi.
 
--Khả năng mở rộng kém, phù hợp với mô hình mạng nhỏ.
+- Khả năng mở rộng kém, phù hợp với mô hình mạng nhỏ.
 
 **VD:**
 

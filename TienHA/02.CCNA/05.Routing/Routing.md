@@ -44,6 +44,8 @@
 
 - **Độ tin cậy:(Reliability)** là một yếu tố thước đo có thể bao gồm một giá trị cố định. Bất kỳ hệ số độ tin cậy nào cũng có thể được xem xét để chỉ định xếp hạng độ tin cậy, thường là các giá trị số được chỉ định bởi người quản trị hệ thống.
 
+- **Metric / Administrative Distance:** chỉ số ưu tiên, nhỏ hơn thì ưu tiên hơn
+
 ### 3. Các thành phần chính của Routing
 
 **Router (Bộ định tuyến):**

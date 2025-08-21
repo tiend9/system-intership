@@ -85,7 +85,7 @@ OSPF (Open Shortest Path First) là một giao thức định tuyến nội bộ
 
   - Người dùng tự cấu hình: Quá trình tự động chọn Router-ID có thể không phù hợp với một số trường hợp, vì vậy người quản trị có thể tự cấu hình Router-ID.
 
-- Bước 2: Thiết lập quan hệ láng giềng (neighbor): Giao thức OSPF sử dụng gói tin HELLO để tìm kiếm các router và thiết lập mối quan hệ láng giềng với chúng. Gói tin HELLO được gửi theo định kỳ, với tần suất mặc định là 10 giây một lần.
+- Bước 2: Thiết lập quan hệ láng giềng (neighbor): Giao thức OSPF sử dụng gói tin HELLO để tìm kiếm các router và thiết lập mối quan hệ láng giềng với chúng. Gói tin HELLO được gửi theo định kỳ, với tần suất mặc định là 10 giây một lần. MultiCast riêng cho OSPF (224.0.0.5)
 
   - Gói tin HELLO chứa thông tin của router gửi gói tin, bao gồm: Router ID, Area ID, Priority, Link State Advertisement (LSA).
 
@@ -125,7 +125,7 @@ OSPF (Open Shortest Path First) là một giao thức định tuyến nội bộ
 
 ### **Cách thức hoạt động của RIP**
 
-- Router chạy RIP quảng bá toàn bộ bảng định tuyến của nó đến các router láng giềng mỗi 30 giây. Bản cập nhật định kỳ này giúp giữ cho các bảng định tuyến được đồng bộ hóa, tạo điều kiện chia sẻ thông tin định tuyến trên toàn mạng.
+- Router chạy RIP quảng bá toàn bộ bảng định or MultiCast (224.0.0.9) tuyến của nó đến các router láng giềng mỗi 30 giây. Bản cập nhật định kỳ này giúp giữ cho các bảng định tuyến được đồng bộ hóa, tạo điều kiện chia sẻ thông tin định tuyến trên toàn mạng.
 
 - RIP sử dụng hop count làm metric duy nhất để lựa chọn đường dẫn. Số lượng hop tối đa được phép cho một đường dẫn là 15, giúp ngăn ngừa vòng lặp định tuyến và giới hạn kích thước mạng.
 
@@ -155,3 +155,9 @@ OSPF (Open Shortest Path First) là một giao thức định tuyến nội bộ
 
 - Metric (32 bits): Đại diện cho số lượng hop vào mạng đích, từ 1 đến
  16, trong đó 16 biểu thị một mạng không thể truy cập được.
+
+## CÁC ĐỊA CHỈ MULTICAST CHO TỪNG GIAO THỨC RIÊNG
+
+- RIPv4: 224.0.0.9
+- OSPF: 224.0.0.6,224.0.0.5
+- EIGRP: 224.0.0.10

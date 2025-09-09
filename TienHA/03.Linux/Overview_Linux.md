@@ -15,18 +15,23 @@ Hệ điều hành Linux được tổ chức theo một kiến trúc phân lớ
 **Hardware (Phần cứng) – Nền tảng vật lý:**
 
 - **Không phải là một thành phần của hệ điều hành Linux**, nhưng là nền tảng để hệ điều hành hoạt động.
+
 - Gồm CPU, RAM, ổ cứng, card mạng, bo mạch chủ và các thiết bị ngoại vi khác.
+
 - Kernel của Linux sẽ giao tiếp với phần cứng thông qua trình điều khiển thiết bị (drivers).
 
 **Kernel (Nhân hệ điều hành) – Cốt lõi của Linux:**
 
 - Thành phần quan trọng nhất của Linux, chịu trách nhiệm quản lý tài nguyên phần cứng và phân phối chúng cho các tiến trình và ứng dụng.
+
 - Quản lý bộ nhớ, CPU, thiết bị ngoại vi và thực thi các tiến trình.
+
 - Kernel hoạt động như một cầu nối giữa phần cứng và phần mềm.
 
 **Shell:**
 
 - Là thành phần đứng giữa người dùng và Kernel
+
 - Làm nhiệm vụ “phiên dịch” các câu lệnh của người dùng cho Kernel hiểu để thao tác với phần cứng.
 
 **User Space (Không gian người dùng) – Ứng dụng và Chương trình:**
@@ -36,13 +41,18 @@ Hệ điều hành Linux được tổ chức theo một kiến trúc phân lớ
 **Các thành phần quan trọng khác:**
 
 - **Bootloader (bộ nạp khởi động):** Khi bật máy tính, nó sẽ trải qua quá trình tự khởi động gọi là booting. Bootloader (bộ nạp khởi động) sẽ có chức năng chính là tải kernel vào bộ nhớ và bắt đầu quá trình khởi động này.
+
 - **Daemon:** là các quy trình chạy ngầm (background process) bắt đầu trong quá trình khởi động. Daemon đảm bảo các chương trình chạy trơn tru trên hệ thống:
+
   - **systemd:** Daemon trung tâm chịu trách nhiệm quản lý các tiến trình daemon khác.
   - **sshd:** Daemon cho phép kết nối an toàn với máy chủ từ xa và cho phép truyền tệp.
   - **Httpd:** Daemon máy chủ web nhận các yêu cầu HTTP và phục vụ các trang web.
   - **cron:** Daemon thực thi các tác vụ hoặc tập lệnh đã lên lịch từ crontab vào những thời điểm được yêu cầu.
+
 - **Init system (Hệ thống khởi tạo):** là một quy trình daemon được bắt đầu bởi kernel. Init system có vai trò khởi tạo không gian người dùng trong khi khởi động và quản lý các quy trình hệ thống trong thời gian chạy.
+
 - **Graphic server (Máy chủ đồ họa):** là một framework cơ bản trên Linux hiển thị đồ họa trên màn hình. Thành phần này triển khai Hệ thống X Window (X11 hoặc X) và cho phép quản lý cửa sổ, nhập liệu bằng bàn phím/chuột và hỗ trợ nhiều màn hình.
+
 - **Môi trường desktop:** là một thành phần không bắt buộc có trên tất cả các hệ thống Linux. Mỗi môi trường desktop cung cấp:
   - Các ứng dụng cài sẵn (ví dụ: trình quản lý tệp và thư mục, công cụ chỉnh sửa văn bản, trình duyệt web, trò chơi, và các tác vụ phổ biến khác).
   - Giao diện người dùng đồ họa (GUI) cho phép người dùng tương tác với hệ điều hành bằng chuột và bàn phím (Ví dụ: cửa sổ, menu thả xuống, cách hiển thị tệp và thư mục…)
@@ -177,6 +187,7 @@ Hệ điều hành Linux được tổ chức theo một kiến trúc phân lớ
 **Distro (Linux Distribution) - bản phân phối của Linux:**
 
 - là một phiên bản của hệ điều hành Linux, được đóng gói kèm theo Kernel (nhân Linux), công cụ hệ thống, phần mềm mặc định, trình quản lý gói (package manager) và giao diện người dùng.
+
 - Mỗi Distro có cách quản lý, tối ưu và mục đích sử dụng khác nhau, phù hợp với nhiều đối tượng từ người mới dùng đến lập trình viên và quản trị hệ thống.
 
 ### 2. Thành phần chính của một bản phân phối Linux
@@ -208,18 +219,25 @@ Hệ điều hành Linux được tổ chức theo một kiến trúc phân lớ
 ![Linux](./images/Linux_4.png)
 
 - `Debian-based` (dựa trên Debian)
+
   - Tiêu biểu: Ubuntu, Linux Mint, Kali Linux, MX Linux.
   - Đặc điểm: Ổn định, dễ dùng, quản lý gói bằng `APT` (`.deb`).
   - Ứng dụng: Máy tính cá nhân, server, bảo mật.
+
 - `Red Hat-based` (dựa trên Red Hat)
+
   - Tiêu biểu: RHEL (Red Hat Enterprise Linux), CentOS, Fedora, Rocky Linux, AlmaLinux.
   - Đặc điểm: Phù hợp cho doanh nghiệp, quản lý gói bằng `DNF`/`YUM` (`.rpm`).
   - Ứng dụng: Server, doanh nghiệp, phát triển phần mềm.
+
 - `Slackware-based` (dựa trên Slackware)
+
   - Tiêu biểu: Slackware, Puppy Linux, Zenwalk.
   - Đặc điểm: Cổ điển, ít thay đổi, không có trình quản lý gói tự động.
   - Ứng dụng: Hệ thống ổn định, chuyên biệt.
+
 - `Arch-based` (dựa trên Arch Linux)
+
   - Tiêu biểu: Arch Linux, Manjaro, EndeavourOS.
   - Đặc điểm: Tối giản, dành cho người dùng nâng cao, quản lý gói bằng `Pacman`.
   - Ứng dụng: Người dùng có kinh nghiệm, hệ thống nhẹ, tùy chỉnh cao.
@@ -227,22 +245,31 @@ Hệ điều hành Linux được tổ chức theo một kiến trúc phân lớ
 **Phân loại theo mục đích sử dụng:**
 
 - `Distro dành cho Desktop` (Người dùng cá nhân)
+
   - Tiêu biểu: Ubuntu, Linux Mint, Fedora, Manjaro.
   - Đặc điểm: Giao diện thân thiện, hỗ trợ phần cứng tốt, dễ dùng.
   - Ứng dụng: Thay thế Windows/macOS, công việc văn phòng, giải trí.
+
 - `Distro dành cho Server`
+
   - Tiêu biểu: Ubuntu Server, CentOS, RHEL, Debian Server, OpenSUSE Leap
   - Đặc điểm: Ổn định, bảo mật cao, hỗ trợ lâu dài (LTS).
   - Ứng dụng: Lưu trữ web, máy chủ doanh nghiệp, điện toán đám mây.
+
 - `Distro dành cho bảo mật & hacking`
+
   - Tiêu biểu: Kali Linux, Parrot OS, BackBox.
   - Đặc điểm: Cung cấp sẵn công cụ pentest, forensic, hacking.
   - Ứng dụng: Kiểm thử bảo mật, nghiên cứu an toàn thông tin.
+
 - `Distro dành cho máy tính cũ & nhẹ`
+
   - Tiêu biểu: Puppy Linux, Lubuntu, Xubuntu, Tiny Core.
   - Đặc điểm: Nhẹ, chạy nhanh trên phần cứng cũ, tối ưu RAM thấp.
   - Ứng dụng: Tái sử dụng máy tính cũ, hệ thống nhúng.
+
 - `Distro dành cho lập trình viên & DevOps`
+
   - Tiêu biểu: Fedora, Arch Linux, Ubuntu, Debian.
   - Đặc điểm: Cập nhật nhanh, nhiều công cụ lập trình, hỗ trợ container.
   - Ứng dụng: Phát triển phần mềm, DevOps, Docker/Kubernetes.
@@ -250,10 +277,13 @@ Hệ điều hành Linux được tổ chức theo một kiến trúc phân lớ
 **Phân loại theo mô hình phát hành (Release Model):**
 
 - `Fixed Release` (Phát hành cố định)
+
   - Tiêu biểu: Ubuntu, Debian, Fedora, RHEL.
   - Đặc điểm: Cập nhật định kỳ (6 tháng – 2 năm), ổn định hơn.
   - Ứng dụng: Người dùng phổ thông, doanh nghiệp.
+
 - `Rolling Release` (Phát hành liên tục)
+
   - Tiêu biểu: Arch Linux, Manjaro, OpenSUSE Tumbleweed.
   - Đặc điểm: Luôn cập nhật phiên bản mới nhất, ít cần cài đặt lại.
   - Ứng dụng: Lập trình viên, người thích cập nhật công nghệ mới.

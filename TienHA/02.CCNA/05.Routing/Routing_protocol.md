@@ -81,7 +81,7 @@ OSPF (Open Shortest Path First) là một giao thức định tuyến nội bộ
 
 - Bước 1: Chọn Router – ID
 
-  - Router tự tạo: Router sẽ xem xét interface nào có địa chỉ IP cao nhất và lấy địa chỉ IP đó làm Router-ID.
+  - Router tự tạo: Router sẽ xem xét interface nào có địa chỉ IP cao nhất ,có các cổng trạng thái là up và ưu tiên các cổng loopback sau đó lấy địa chỉ IP đủ điều kiện trên làm Router-ID.
 
   - Người dùng tự cấu hình: Quá trình tự động chọn Router-ID có thể không phù hợp với một số trường hợp, vì vậy người quản trị có thể tự cấu hình Router-ID.
 

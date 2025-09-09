@@ -15,23 +15,18 @@ Hệ điều hành Linux được tổ chức theo một kiến trúc phân lớ
 **Hardware (Phần cứng) – Nền tảng vật lý:**
 
 - **Không phải là một thành phần của hệ điều hành Linux**, nhưng là nền tảng để hệ điều hành hoạt động.
-
 - Gồm CPU, RAM, ổ cứng, card mạng, bo mạch chủ và các thiết bị ngoại vi khác.
-
 - Kernel của Linux sẽ giao tiếp với phần cứng thông qua trình điều khiển thiết bị (drivers).
 
 **Kernel (Nhân hệ điều hành) – Cốt lõi của Linux:**
 
 - Thành phần quan trọng nhất của Linux, chịu trách nhiệm quản lý tài nguyên phần cứng và phân phối chúng cho các tiến trình và ứng dụng.
-
 - Quản lý bộ nhớ, CPU, thiết bị ngoại vi và thực thi các tiến trình.
-
 - Kernel hoạt động như một cầu nối giữa phần cứng và phần mềm.
 
 **Shell:**
 
 - Là thành phần đứng giữa người dùng và Kernel
-
 - Làm nhiệm vụ “phiên dịch” các câu lệnh của người dùng cho Kernel hiểu để thao tác với phần cứng.
 
 **User Space (Không gian người dùng) – Ứng dụng và Chương trình:**
@@ -41,7 +36,6 @@ Hệ điều hành Linux được tổ chức theo một kiến trúc phân lớ
 **Các thành phần quan trọng khác:**
 
 - **Bootloader (bộ nạp khởi động):** Khi bật máy tính, nó sẽ trải qua quá trình tự khởi động gọi là booting. Bootloader (bộ nạp khởi động) sẽ có chức năng chính là tải kernel vào bộ nhớ và bắt đầu quá trình khởi động này.
-
 - **Daemon:** là các quy trình chạy ngầm (background process) bắt đầu trong quá trình khởi động. Daemon đảm bảo các chương trình chạy trơn tru trên hệ thống:
 
   - **systemd:** Daemon trung tâm chịu trách nhiệm quản lý các tiến trình daemon khác.
@@ -50,9 +44,7 @@ Hệ điều hành Linux được tổ chức theo một kiến trúc phân lớ
   - **cron:** Daemon thực thi các tác vụ hoặc tập lệnh đã lên lịch từ crontab vào những thời điểm được yêu cầu.
 
 - **Init system (Hệ thống khởi tạo):** là một quy trình daemon được bắt đầu bởi kernel. Init system có vai trò khởi tạo không gian người dùng trong khi khởi động và quản lý các quy trình hệ thống trong thời gian chạy.
-
 - **Graphic server (Máy chủ đồ họa):** là một framework cơ bản trên Linux hiển thị đồ họa trên màn hình. Thành phần này triển khai Hệ thống X Window (X11 hoặc X) và cho phép quản lý cửa sổ, nhập liệu bằng bàn phím/chuột và hỗ trợ nhiều màn hình.
-
 - **Môi trường desktop:** là một thành phần không bắt buộc có trên tất cả các hệ thống Linux. Mỗi môi trường desktop cung cấp:
   - Các ứng dụng cài sẵn (ví dụ: trình quản lý tệp và thư mục, công cụ chỉnh sửa văn bản, trình duyệt web, trò chơi, và các tác vụ phổ biến khác).
   - Giao diện người dùng đồ họa (GUI) cho phép người dùng tương tác với hệ điều hành bằng chuột và bàn phím (Ví dụ: cửa sổ, menu thả xuống, cách hiển thị tệp và thư mục…)
@@ -187,7 +179,6 @@ Hệ điều hành Linux được tổ chức theo một kiến trúc phân lớ
 **Distro (Linux Distribution) - bản phân phối của Linux:**
 
 - là một phiên bản của hệ điều hành Linux, được đóng gói kèm theo Kernel (nhân Linux), công cụ hệ thống, phần mềm mặc định, trình quản lý gói (package manager) và giao diện người dùng.
-
 - Mỗi Distro có cách quản lý, tối ưu và mục đích sử dụng khác nhau, phù hợp với nhiều đối tượng từ người mới dùng đến lập trình viên và quản trị hệ thống.
 
 ### 2. Thành phần chính của một bản phân phối Linux

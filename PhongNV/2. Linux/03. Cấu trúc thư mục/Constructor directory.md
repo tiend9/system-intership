@@ -95,6 +95,7 @@ Cấu trúc thư mục Linux được thiết kế để phân chia các tài ng
 
 
 # ***Tài liệu tham khảo***
+
 <https://freetuts.net/cau-truc-thu-muc-trong-linux-3632.html>
 <https://quantrimang.com/cong-nghe/cau-truc-cay-thu-muc-trong-linux-84056>
 <https://blog.mypapit.net/2012/08/the-linux-file-system-hierarchy-graphical-guide.html>

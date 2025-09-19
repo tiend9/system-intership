@@ -38,7 +38,7 @@ Ví dụ, người sử dụng có thể đồng bộ hóa các thiết lập h�
 
 VMware cũng cung cấp các công cụ và giải pháp bảo mật cho phép người sử dụng bảo vệ máy tính và các tài nguyên. Các công cụ này giúp ngăn chặn các cuộc tấn công từ mạng và ngăn ngừa sự tạo ra các lỗ hổng bảo mật trên hệ thống máy tính.
 
-### 4. Cài dặt VNM Workstation
+### 4. Cài dặt VMW Workstation
 
 Tất cả các bước đều có trong link này :
 

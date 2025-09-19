@@ -6,7 +6,7 @@
 
 VMware là phần mềm máy chủ ảo chức năng như một hệ thống máy tính ảo với CPU, bộ nhớ, mạng và bộ lưu trữ riêng. Chúng được tạo bởi một hệ thống phần cứng vật lý. Phần mềm được gọi là hypervisor chia các tài nguyên của máy khỏi phần cứng và cung cấp một cách thích hợp để máy ảo(VM) có thể sử dụng.
 
-### 2. Các loại hypervisors của VMware?
+### 2. Hypervisor là gì - Các loại hypervisors?
 
 Hypervisors là công cụ được sử dụng để tạo máy ảo (VM) để lưu trữ dịch vụ, thử nghiệm và phát triển phần mềm trong một môi trường an toàn.
 

@@ -54,7 +54,7 @@ Nếu chưa có:
 - Chỉnh sửa file cấu hình card mạng:
 
 ```ruby
-sudo nano /etc/sysconfig/network-scripts/ifcfg-ens160
+sudo nano /etc/NetworkManager/systemconnections/ens160.nmconnection
 ```
 
 Cập nhật thêm thông tin nội dung như sau:
@@ -78,7 +78,7 @@ ip addr
 Từ CentOS 9 ping tới Ubuntu Server:
 
 ```ruby
-ping 192.168.186.100
+ping 192.168.157.128
 ```
 
 kết quả ping thành công:
@@ -88,7 +88,7 @@ kết quả ping thành công:
 Từ Ubuntu Server ping tới CentOS 9:
 
 ```ruby
-ping 192.168.186.10
+ping 192.168.157.62
 ```
 
 Kết quả ping thành công:
@@ -130,14 +130,14 @@ ip a show dev ens160
 
 **Cách 2: Cài đặt IP tĩnh (Nếu không muốn dùng DHCP):**
 
-**Lưu ý quan trọng:** Chọn địa chỉ IP chưa sử dụng và cùng dải với laptop không thì sẽ gặp tình trạng lỗi nếu đang ở trong 1 mạng LAN có địa chỉ đó.
+**Lưu ý quan trọng:** Chọn địa chỉ IP chưa sử dụng và cùng dải với laptop không thì sẽ gặp tình trạng lỗi nếu đang ở trong 1 mạng LAN có địa chỉ trùng với địa chỉ đó.
 
 `CentOS 9:`
 
 Mở cấu hình mạng:
 
 ```ruby
-sudo vi /etc/sysconfig/network-scripts/ifcfg-ens33
+sudo vi /etc/sysconfig/network-scripts/ifcfg-ens160
 ```
 
 Cập nhật nội dung:

@@ -159,3 +159,5 @@ Không có kết nối với card mạng vật lý của máy host, nên máy �
 ## III. SNAT,DNAT
 
 Đã tìm hiểu ở bài NAT
+
+Link: <https://github.com/tiend9/system-intership/blob/master/TienHA/02.CCNA/06.NAT/NAT.md>

@@ -70,13 +70,13 @@ Mỗi thành phần sẽ có Pair key riêng biệt: **User Key**, **Host Key**,
 
 ![SSH](./images/SSH_2.png)
 
-### Giai đoạn 1 - TCP handshake
+#### Giai đoạn 1 - TCP handshake
 
 - Client khởi tạo kết nối TCP đến server qua cổng mặc định 22 (hoặc cổng tùy chỉnh).
 - Server lắng nghe trên cổng 22 và phản hồi bằng một gói tin SYN-ACK để chấp nhận yêu cầu kết nối.
 - Client gửi lại một gói tin ACK để hoàn tất quá trình bắt tay ba bước (three-way handshake) của TCP. Lúc này, một kết nối TCP đã được thiết lập giữa client và server.
 
-### Giai đoạn 2 - Protocol Version Exchange
+#### Giai đoạn 2 - Protocol Version Exchange
 
 - Sau khi kết nối TCP được thiết lập, client và server bắt đầu thương lượng về phiên bản giao thức SSH mà họ sẽ sử dụng và các thuật toán mã hóa, xác thực được hỗ trợ, ví dụ:
 
@@ -84,7 +84,7 @@ Mỗi thành phần sẽ có Pair key riêng biệt: **User Key**, **Host Key**,
 SSH-2.0-OpenSSH_9.3p1 Ubuntu-1
 ```
 
-### Giai đoạn 3 - Version Negotiation
+#### Giai đoạn 3 - Version Negotiation
 
 SSH có hai phiên bản là SSH1.X(có sớm hơn) và SSH2.0. SSH2.0 sẽ hỗ trợ thêm một số phương thức xác nhận, phương pháp mã hóa và một số dịch vụ bổ sung. SSH client và SSH server sẽ trao đổi để quyết định phiên bản SSH nào được sử dụng:
 
@@ -92,11 +92,11 @@ SSH có hai phiên bản là SSH1.X(có sớm hơn) và SSH2.0. SSH2.0 sẽ hỗ
 - Sau khi nhận được thông tin từ SSH server, nó cũng sẽ gửi lại các phiên bản SSH mà nó hỗ trợ lại SSH server.
 - SSH server tiến hành kiểm tra thông tin và xác định phiên bản SSH sẽ được sử dụng.
 
-### Giai đoạn 4 - Algorithm Negotiation
+#### Giai đoạn 4 - Algorithm Negotiation
 
 - Mục tiêu của giai đoạn này là xác dịnh thuật toán sử dụng dể trao đổi khóa như Diffie-Hellman (DH) hoặc Elliptic Curve Diffie-Hellman (ECDH).
 
-### Giai đoạn 5 - Key Exchange
+#### Giai đoạn 5 - Key Exchange
 
 - Mục tiêu của giai đoạn này là tạo ra **Session key**. Quá trình này thường sử dụng các thuật toán trao đổi khóa như Diffie-Hellman (DH) hoặc Elliptic Curve Diffie-Hellman (ECDH).
 - Các bước cơ bản (ví dụ sử dụng Diffie-Hellman (DH)):
@@ -114,7 +114,7 @@ SSH có hai phiên bản là SSH1.X(có sớm hơn) và SSH2.0. SSH2.0 sẽ hỗ
   - Server nhận `A = 8` → tính `K = 8^15 mod 23 = 18`
   - Kết quả: cùng shared secret `K = 18` mà không cần gửi a hoặc b
 
-### Giai đoạn 6 - User Authentication
+#### Giai đoạn 6 - User Authentication
 
 ![SSH](./images/SSH_3.png)
 
@@ -133,7 +133,7 @@ SSH có hai phiên bản là SSH1.X(có sớm hơn) và SSH2.0. SSH2.0 sẽ hỗ
   - Server dùng public key (client đã đăng ký trước) để kiểm tra chữ ký.
   - Nếu chữ ký hợp lệ → xác thực thành công
 
-### Giai đoạn 7 - Request Services (Sau xác thực)
+#### Giai đoạn 7 - Request Services (Sau xác thực)
 
 Sau khi xác thực thành công, client có thể yêu cầu dịch vụ.
 

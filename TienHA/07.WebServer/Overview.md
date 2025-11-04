@@ -14,19 +14,19 @@ Khi ta gõ <https://www.google.com>, web server Google chính là máy đang g�
 
 Một web server thường gồm 2 phần:
 
-| Thành phần                   | Vai trò                                                                                                             |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| Thành phần                   | Vai trò                                                    |
+| ---------------------------- | ---------------------------------------------------------- |
 |**Phần cứng (Hardware)** | Là **máy chủ (Server machine)** – có thể là máy thật hoặc máy ảo, lưu trữ các file web (HTML, CSS, JS, ảnh, API...) |
 |**Phần mềm (Software)**   | Là **chương trình xử lý yêu cầu HTTP** – ví dụ: Apache, Nginx, IIS, Caddy…                                          |
 
 ### 3. Phân loại Webserver
 
-**L1. Static webserver (Máy chủ tĩnh)**:
+#### L1. Static webserver (Máy chủ tĩnh)
 
 Phục vụ các nội dung cố định (HTML, CSS, JS, hình ảnh).
 Ví dụ: Nginx, Apache.
 
-**L2. Dynamic webserver (Máy chủ động)**:
+#### L2. Dynamic webserver (Máy chủ động)
 
 Kết hợp máy chủ HTTP với phần mềm ứng dụng (PHP, Python, Node.js…).
 Ví dụ: Apache + PHP, Nginx + FastCGI.

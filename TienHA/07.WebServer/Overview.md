@@ -4,7 +4,7 @@
 
 ### 1. Khái niệm
 
-WebServer là phần mềm hoặc phần cứng có nhiệm vụ nhận yêu cầu (HTTP request) từ client (thường là trình duyệt) và trả về phản hồi (HTTP response) – thường là trang web, tài nguyên hoặc dữ liệu.
+WebServer là phần mềm dặt trên **Sever**(phần cứng) có nhiệm vụ nhận yêu cầu (HTTP request) từ client (thường là trình duyệt) và trả về phản hồi (HTTP response) – thường là trang web, tài nguyên hoặc dữ liệu.
 
 **Ví dụ**:
 

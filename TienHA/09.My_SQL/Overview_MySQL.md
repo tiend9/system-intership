@@ -13,7 +13,7 @@ Trong thời đại Internet ngày nay, Chúng ta tiếp xúc với **DataBase**
 - Khi bạn chụp ảnh và tải lên tài khoản của mình trên mạng xã hội như Facebook, **thư viện ảnh** của bạn sẽ trở thành cơ sở dữ liệu.  
 ...
 
-### 1.Khái niệm về DATABASE & Các khái niệm liên quan
+### 1. Khái niệm về DATABASE & Các khái niệm liên quan
 
 - **Database:** là một tập hợp dữ liệu có tổ chức, được lưu trữ và quản lý một cách có hệ thống trên máy tính, cho phép truy xuất, cập nhật và quản lý thông tin một cách hiệu quả.
 
@@ -27,7 +27,7 @@ Trong thời đại Internet ngày nay, Chúng ta tiếp xúc với **DataBase**
   - Mô hình tương tác của DBMS
 
 ```rust
-Người dùng/Ứng dụng  <-->  DBMS  <-->  Database
+Người dùng /Ứng dụng <--> DBMS <--> Database
 ```
 
 - **RDB - Realational DB:** **RDB (Relational Database – Cơ sở dữ liệu quan hệ)** là loại cơ sở dữ liệu lưu trữ dữ liệu theo **dạng bảng (table)**, trong đó các bảng có thể **liên kết** với nhau thông qua các **khóa (keys)** để đảm bảo **tính nhất quán** và quan hệ giữa các dữ liệu.

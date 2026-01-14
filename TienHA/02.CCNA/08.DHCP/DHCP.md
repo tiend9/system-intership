@@ -96,6 +96,8 @@ DHCP Binding là bản ghi lưu trữ trong DHCP Server, chứa thông tin ánh 
 
 ### 5. Sơ đồ hoạt động DHCP
 
+Sơ đồ nguyên lí hoạt động của DHCP: Quy trình **DORA**
+
 ![DHCP](./images/DHCP_4.png)
 
 **Bước 1 - Discovery (Tìm kiếm máy chủ DHCP)**:

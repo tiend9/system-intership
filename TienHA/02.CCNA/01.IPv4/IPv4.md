@@ -275,6 +275,6 @@ Là địa chỉ đầu tiên có thể sử dụng được trong mạng con
 
 **Giải thích**
 
-- Để tìm **Usuable address** đầu tiên của mạng con, hãy chuyển đổi các bit phần host thành 0 rồi cộng thêm 1 địa chỉ là ra **Deafault Gateway**. 
+- Để tìm **Usuable address** đầu tiên của mạng con, hãy chuyển đổi các bit phần host thành 0 rồi cộng thêm 1 địa chỉ là ra **Deafault Gateway**.
 
 - Hai octet cuối cùng của địa chỉ là 197 (11000101) và 201 (11001001). Độ dài tiền tố là /21, vì vậy 11 bit cuối cùng là phần host. Đổi các bit phần host thành 0 sẽ cho kết quả là 192 (11000000) và 0 (00000000), do đó địa chỉ mạng là 172.30.192.0, và địa chỉ khả dụng đầu tiên (địa chỉ IP của **Default Gateway**) là 172.30.192.1.

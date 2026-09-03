@@ -202,5 +202,3 @@ Tài liệu tham khảo:
 https://daringfireball.net/projects/markdown/
 
 https://commonmark.org/
-
-https://guides.github.com/features/mastering-markdown/

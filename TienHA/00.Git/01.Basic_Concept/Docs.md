@@ -16,7 +16,7 @@ Version Control là hệ thống ghi lại mọi thay đổi của một tệp h
 
 ![Centralized VCS](./images/GIT_2.png)
 
-**Distributed VCS (DVCS):** Mỗi người dùng đều có một bản sao đầy đủ của kho lưu trữ (Repository) trên máy cá nhân của họ (Ví dụ: Git, Mercurial). Nếu máy chủ gặp sự cố, bất kỳ bản sao nào của người dùng cũng có thể được sử dụng để khôi phục.
+**Distributed VCS (DVCS):** Mỗi người dùng đều có một bản sao đầy đủ của kho lưu trữ (Repository) trên máy cá nhân của họ (Ví dụ: Git, Mercurial). Nếu máy chủ gặp sự cố, bất kỳ bản sao nào của người dùng cũng có thể được sử dụng để khôi phục
 
 ![Distributed VCS](./images/GIT_3.png)
 

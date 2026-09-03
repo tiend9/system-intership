@@ -178,4 +178,4 @@ Mặc dù tấn công này chủ yếu là vấn đề trong quá khứ, nhưng 
 
 #### 8.3. Smurf attack
 
-Trong một cuộc tấn công Smurf, kẻ tấn công gửi một gói tin với địa chỉ IP giả mạo. Các thiết bị mạng nhận được gói tin này và gửi phản hồi đến địa chỉ IP giả, khiến nạn nhân bị ngập trong các gói tin ICMP không mong muốn. Giống như cuộc tấn công ping of death, cuộc tấn công Smurf hiện nay chỉ có thể xảy ra với các thiết bị cũ.
+Trong một cuộc tấn công Smurf, kẻ tấn công gửi một gói tin với địa chỉ IP giả mạo. Các thiết bị mạng nhận được gói tin này và gửi phản hồi đến địa chỉ IP giả, khiến nạn nhân bị ngập trong các gói tin ICMP không mong muốn. Giống như cuộc tấn công ping of death, cuộc tấn công Smurf hiện nay chỉ có thể xảy ra với các thiết bị cũ

@@ -41,4 +41,4 @@ Trên hình là mô hình một mạng sử dụng ba router R1, R2, R3 đại d
 
 Sơ đồ sử dụng nhiều subnet cùng một major network 172.16.0.0/16 là 172.16.2.0/24, 172.16.3.128/25 và 172.16.23.0/30. Khi trên một sơ đồ mạng tồn tại nhiều subnet của cùng một major và các subnet sử dụng nhiều prefix length khác nhau thì có thể nói sơ đồ sử dụng VLSM (Variable Length Subnet Mask).
 
-Trên sơ đồ, có thể thấy mạng major 172.16.0.0/16 đã bị chia cắt bởi một mạng major khác đó là 192.168.12.0/24, thì có thể nói đây là sơ đồ mạng gián đoạn (discontiguous network).
+Trên sơ đồ, có thể thấy mạng major 172.16.0.0/16 đã bị chia cắt bởi một mạng major khác đó là 192.168.12.0/24, thì có thể nói đây là sơ đồ mạng gián đoạn (discontiguous network)

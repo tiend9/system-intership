@@ -62,4 +62,4 @@ Giao thức giải quyết địa chỉ (ARP - Address Resolution Protocol) là 
 1) Máy A nhận được ARP Reply
 
 - Lưu IP <-> MAC vào bảng ARP cache.
-- Dùng MAC vừa nhận để chuyển dữ liệu.
+- Dùng MAC vừa nhận để chuyển dữ liệu

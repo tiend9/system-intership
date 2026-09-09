@@ -7,7 +7,7 @@ Lab này chuyển hệ thống Flasky [này](https://github.com/tiend9/system-in
 - Flasky chạy ít nhất 2 replica, được cân bằng tải và tự tạo lại Pod khi lỗi.
 - Database, cache và object storage chỉ được truy cập nội bộ trong cluster.
 
-Đây là **môi trường lab có độ sẵn sàng cho tầng ứng dụng**, không phải HA hoàn chỉnh cho database.
+Đây là **môi trường lab có độ sẵn sàng cho tầng ứng dụng**, không phải HA hoàn chỉnh cho database
 
 > Giả định: ứng dụng đã được chỉnh như lab Docker trước đó, tức có DATABASE_URL, REDIS_URL, MINIO_ENDPOINT, MINIO_ACCESS_KEY, MINIO_SECRET_KEY và MINIO_BUCKET. Image Flasky lắng nghe cổng 5000.
 
